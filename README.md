@@ -20,17 +20,27 @@ This project utilizes a **Source Overlay** pattern to maintain a lightweight foo
 *   `development_log.md`: Implementation task checklist.
 *   `scripts/`: Utilities for applying changes to and capturing snapshots from a full Chromium build.
 
-## 🧠 Current Status: The "Hearing" Browser (Day 2)
+## 🧠 Current Status: Audio Hook Verified (Day 2-3)
 
-### ✅ Auditory Cortex (Online)
-*   **Feature**: Native Audio Bridge (`content.dll` -> `nexus_agent.py`).
-*   **Capabilities**: Real-time microphone capture, "Hyper-Sensitive" Voice Activity Detection (0.2s), Gemini 1.5 Pro transcription.
-*   **Verification**: "Matrix Rain" in terminal validates packet flow.
+### ✅ Auditory Cortex - Audio Hook (PROVEN WORKING)
+*   **Feature**: Native Audio Bridge (`NetworkSpeechRecognitionEngineImpl` → `chrome_debug.log` → `nexus_agent.py`)
+*   **Status**: **Audio capture verified** - Chrome successfully logs 800+ base64-encoded PCM audio chunks
+*   **Evidence**: `LOG(WARNING) << "AUDIO_DATA:" << b64_pcm;` confirmed working in production
+*   **Capabilities**: 
+    - Real-time microphone capture via Web Speech API
+    - Base64 PCM encoding (16kHz, 16-bit, mono)
+    - File-based IPC to Python agent
 
-### ⚠️ Visual Cortex (Paused)
-*   **Feature**: "Computer Use" / Zero-Latency Video Stream.
-*   **Status**: Blocked by Build System "Antibody" response (`manifest error` in `gn gen`).
-*   **Plan**: Requires architectural refactor (Day 3).
+### ⚠️ Transcription Pipeline (BLOCKED - Python Threading Issue)
+*   **Status**: Audio reaches Python agent (14 chunks confirmed) but thread stops receiving data
+*   **Issue**: `tail_chrome_log()` background thread stops reading file after initial success
+*   **Evidence**: No "Received Audio Chunk" messages after 21:43:57 despite Chrome logging 230+ new entries
+*   **Blocker**: Windows-specific Python file tailing behavior needs research
+*   **See**: `audio_thread_issue.md` for full technical analysis
+
+### ⏸️ Visual Cortex (Next Phase)
+*   **Feature**: Zero-copy frame capture via shared memory
+*   **Status**: Paused pending audio transcription resolution
 
 ## Getting Started
 

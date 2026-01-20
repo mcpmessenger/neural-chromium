@@ -10,3 +10,7 @@ build/
 # Local configuration
 *.user
 *.suo
+
+# API Keys and sensitive config
+src/config.json
+config.json

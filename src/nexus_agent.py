@@ -315,7 +315,7 @@ class GeminiProvider(LLMProvider):
         if not genai:
             raise ImportError("google-generativeai module not installed")
         genai.configure(api_key=api_key)
-        self.model = genai.GenerativeModel('gemini-1.5-pro')
+        self.model = genai.GenerativeModel('gemini-2.0-flash')
 
     def generate_text(self, prompt: str) -> str:
         response = self.model.generate_content(prompt)
@@ -386,8 +386,8 @@ class NexusAgent:
         
         self.audio_buffer = bytearray()
         self.silence_chunks = 0
-        self.SILENCE_THRESHOLD = 100 # Low Threshold for testing
-        self.SILENCE_DURATION = 1.0
+        self.SILENCE_THRESHOLD = 50 # Very low threshold for quick testing
+        self.SILENCE_DURATION = 0.5 # Faster trigger
         self.MIN_RECORD_SECONDS = 0.2
         
         self.visual_cortex = VisualCortexClient()
@@ -450,23 +450,23 @@ class NexusAgent:
             msvcrt.setmode(sys.stdin.fileno(), os.O_BINARY)
             sys.stdout.reconfigure(encoding='utf-8')
 
+        # DISABLED stdin processing - only use audio from log file
+        # while True:
+        #     try:
+        #         line = sys.stdin.readline()
+        #         if not line:
+        #             break
+        #         self.check_vision()
+        #         self.handle_message(line)
+        #     except Exception as e:
+        #         log(f"Error loop: {e}")
+        
+        # Simple loop to keep agent running while audio thread processes
+        print(" [Agent] Audio-only mode. Listening for voice input...", flush=True)
         while True:
-            try:
-                line = sys.stdin.readline()
-                if not line:
-                    # Non-blocking check for vision if no input? 
-                    # Actually readline blocks. We might need a separate thread or non-blocking IO.
-                    # For now, let's check vision BEFORE blocking on readline if possible, 
-                    # but since we are blocking, this only updates when input happens?
-                    # Windows stdin is hard to make non-blocking comfortably without threads.
-                    # We will assume separate thread for Vision in Phase 3.
-                    # For Verification: Just check on loop tick.
-                    break
-                
-                self.check_vision()
-                self.handle_message(line)
-            except Exception as e:
-                log(f"Error loop: {e}")
+            time.sleep(1)
+            # Audio processing happens in background thread
+
 
     def check_vision(self):
         # Poll Visual Cortex
@@ -514,35 +514,19 @@ class NexusAgent:
         return (sum_squares / count) ** 0.5
 
     def process_audio(self, pcm_data):
-        # data_b64 = params.get("data") -- REMOVED (Caller unpacks)
-        # chunk = base64.b64decode(data_b64) -- REMOVED
-        
         chunk = pcm_data
-        # Debug: Check data size to confirm Sample Rate
-        # 1600 bytes = 8kHz (100ms)
-        # 3200 bytes = 16kHz (100ms)
-        # print("debug output", flush=True) 
         log(f"Received Audio Chunk: {len(chunk)} bytes")
 
-        rms = self.calculate_rms(chunk)
         self.audio_buffer.extend(chunk)
+        self.silence_chunks += 1  # Use as chunk counter instead
         
-        if rms > self.SILENCE_THRESHOLD:
+        # BYPASS SILENCE DETECTION - Force transcription every 20 chunks (~2 seconds)
+        if self.silence_chunks >= 20:
+            if len(self.audio_buffer) > 16000:  # At least 1 second of audio
+                log(f"Forcing transcription after {self.silence_chunks} chunks, buffer size: {len(self.audio_buffer)}")
+                self.on_speech_complete()
+            self.audio_buffer = bytearray()
             self.silence_chunks = 0
-        else:
-            self.silence_chunks += 1
-            
-        # 10 chunks = 1 sec (approx)
-        if self.silence_chunks > (self.SILENCE_DURATION * 10):
-            if len(self.audio_buffer) > (16000 * self.MIN_RECORD_SECONDS): # Adjusted for 8k? No, buffer is bytes.
-                 # 8kHz * 2 bytes = 16000 bytes/sec
-                 pass # Logic below handles trigger
-
-            if self.silence_chunks > 20: # 2 seconds silence -> flush
-                if len(self.audio_buffer) > 0:
-                     self.on_speech_complete()
-                self.audio_buffer = bytearray()
-                self.silence_chunks = 0
 
     def on_speech_complete(self):
         log("Speech detected. Transcribing...")
