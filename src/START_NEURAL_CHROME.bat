@@ -1,0 +1,82 @@
+@echo off
+REM ============================================================================
+REM Neural-Chromium Complete Launch Script
+REM Starts Chrome + Python Agent + Opens Settings (if needed)
+REM ============================================================================
+
+echo.
+echo ========================================
+echo   NEURAL-CHROMIUM LAUNCHER
+echo ========================================
+echo.
+
+REM Check if config.json exists
+if not exist "%~dp0config.json" (
+    echo [!] No config.json found!
+    echo [!] Opening settings page to configure API keys...
+    echo.
+    start "" "%~dp0settings.html"
+    echo.
+    echo Please configure your API keys in the browser window.
+    echo After saving, the config.json will be downloaded.
+    echo Move it to: %~dp0
+    echo.
+    echo Press any key once you've saved the config...
+    pause
+    
+    REM Check again
+    if not exist "%~dp0config.json" (
+        echo [X] Still no config.json found. Exiting...
+        pause
+        exit /b 1
+    )
+)
+
+echo [✓] Config found!
+echo.
+
+REM Kill existing processes
+echo [1/4] Cleaning up old processes...
+taskkill /F /IM chrome.exe 2>nul
+taskkill /F /IM python.exe 2>nul
+timeout /t 2 /nobreak >nul
+echo     Done.
+echo.
+
+REM Clear old logs
+echo [2/4] Clearing old logs...
+del /Q C:\tmp\neural_chrome_profile\chrome_debug.log 2>nul
+del /Q C:\tmp\nexus_agent.log 2>nul
+echo     Done.
+echo.
+
+REM Start Python Agent
+echo [3/4] Starting Nexus Agent (Python)...
+start "Nexus Agent" cmd /k "cd /d %~dp0 && python nexus_agent.py"
+timeout /t 2 /nobreak >nul
+echo     Done.
+echo.
+
+REM Launch Chrome
+echo [4/4] Launching Neural-Chromium...
+start "" cmd /c "c:\operation-greenfield\neural-chromium\src\out\AgentDebug\chrome.exe --enable-logging --v=1 --disable-features=OnDeviceSpeechRecognition --vmodule=network_speech_recognition_engine_impl=1 --user-data-dir=C:\tmp\neural_chrome_profile 2> C:\tmp\neural_chrome_profile\chrome_debug.log"
+echo     Done.
+echo.
+
+echo ========================================
+echo   NEURAL-CHROMIUM IS RUNNING!
+echo ========================================
+echo.
+echo Chrome: Running with audio hook
+echo Agent:  Running in separate window
+echo Logs:   C:\tmp\nexus_agent.log
+echo.
+echo To test voice:
+echo   1. Click microphone icon in Chrome
+echo   2. Speak clearly
+echo   3. Check agent window for transcription
+echo.
+echo To manage API keys:
+echo   Double-click: open_settings.bat
+echo.
+pause

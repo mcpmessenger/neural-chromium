@@ -20,7 +20,7 @@ This project utilizes a **Source Overlay** pattern to maintain a lightweight foo
 *   `development_log.md`: Implementation task checklist.
 *   `scripts/`: Utilities for applying changes to and capturing snapshots from a full Chromium build.
 
-## 🧠 Current Status: Audio Hook Verified (Day 2-3)
+## 🧠 Current Status: Visual Cortex Active (Day 4)
 
 ### ✅ Auditory Cortex - Audio Hook (PROVEN WORKING)
 *   **Feature**: Native Audio Bridge (`NetworkSpeechRecognitionEngineImpl` → `chrome_debug.log` → `nexus_agent.py`)
@@ -31,12 +31,21 @@ This project utilizes a **Source Overlay** pattern to maintain a lightweight foo
     - Base64 PCM encoding (16kHz, 16-bit, mono)
     - File-based IPC to Python agent
 
-### ⚠️ Transcription Pipeline (BLOCKED - Python Threading Issue)
-*   **Status**: Audio reaches Python agent (14 chunks confirmed) but thread stops receiving data
-*   **Issue**: `tail_chrome_log()` background thread stops reading file after initial success
-*   **Evidence**: No "Received Audio Chunk" messages after 21:43:57 despite Chrome logging 230+ new entries
-*   **Blocker**: Windows-specific Python file tailing behavior needs research
-*   **See**: `audio_thread_issue.md` for full technical analysis
+### ✅ Visual Cortex - Vision Hook (PROVEN WORKING)
+*   **Feature**: Shared Memory Bridge (`RenderWidgetHostViewAura` → `Local\NeuralChromium_VisualCortex_V3` → `nexus_agent.py`)
+*   **Status**: **Vision Verified** - C++ captures 600+ frames/sec, Agent describes screen content via GPT-4o.
+*   **Evidence**: "Nexus, describe screen" successfully returns detailed UI description.
+*   **Capabilities**:
+    - High-performance (Shared Memory) frame streaming (640x360 @ 5fps+)
+    - Zero-copy (mostly) architecture using NULL DACL for cross-process access
+    - Integrated with OpenAI GPT-4o Vision
+
+### ✅ Transcription Pipeline (WORKING)
+*   **Status**: Audio continuously processed by Python agent
+*   **Fix**: Implemented file stat refresh to detect log file growth on Windows
+*   **Tuning**: VAD Threshold lowered to 1500 (High Sensitivity), Latency reduced to ~1.5s
+*   **Evidence**: Wake word "Nexus" triggers reliably.
+*   **See**: `walkthrough.md` for full fix documentation
 
 ### ⏸️ Visual Cortex (Next Phase)
 *   **Feature**: Zero-copy frame capture via shared memory

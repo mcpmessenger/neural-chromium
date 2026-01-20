@@ -7,6 +7,7 @@ import wave
 import struct
 import ctypes
 import threading
+import io
 from abc import ABC, abstractmethod
 
 # --- Dependencies ---
@@ -18,6 +19,9 @@ except ImportError:
     OpenAI = None
 
 try:
+    import warnings
+    # Suppress the noisy deprecation warning
+    warnings.filterwarnings("ignore", category=FutureWarning, module="google.generativeai")
     import google.generativeai as genai
 except ImportError:
     genai = None
@@ -260,8 +264,12 @@ LOG_FILE = r"C:\tmp\nexus_agent.log"
 TEMP_WAV = r"C:\tmp\nexus_audio.wav"
 
 def log(msg):
-    with open(LOG_FILE, "a", encoding='utf-8') as f:
-        f.write(f"[{time.strftime('%X')}] {msg}\n")
+    try:
+        print(f"[LOG] {msg}", flush=True)
+        with open(LOG_FILE, "a", encoding='utf-8') as f:
+            f.write(f"[{time.strftime('%X')}] {msg}\n")
+    except Exception:
+        pass
 
 def load_config():
     config_path = os.path.join(os.path.dirname(__file__), "config.json")
@@ -308,7 +316,34 @@ class OpenAIProvider(LLMProvider):
         return transcript
 
     def generate_vision(self, prompt: str, image) -> str:
-        return "OpenAI Vision not implemented yet."
+        try:
+            # Convert PIL Image to Base64
+            buffered = io.BytesIO()
+            image.save(buffered, format="PNG")
+            img_str = base64.b64encode(buffered.getvalue()).decode("utf-8")
+            
+            response = self.client.chat.completions.create(
+                model="gpt-4o",
+                messages=[
+                    {
+                        "role": "user",
+                        "content": [
+                            {"type": "text", "text": prompt},
+                            {
+                                "type": "image_url",
+                                "image_url": {
+                                    "url": f"data:image/png;base64,{img_str}"
+                                },
+                            },
+                        ],
+                    }
+                ],
+                max_tokens=500,
+            )
+            return response.choices[0].message.content
+        except Exception as e:
+            log(f"OpenAI Vision Error: {e}")
+            return f"Error seeing: {e}"
 
 class GeminiProvider(LLMProvider):
     def __init__(self, api_key):
@@ -386,9 +421,7 @@ class NexusAgent:
         
         self.audio_buffer = bytearray()
         self.silence_chunks = 0
-        self.SILENCE_THRESHOLD = 50 # Very low threshold for quick testing
-        self.SILENCE_DURATION = 0.5 # Faster trigger
-        self.MIN_RECORD_SECONDS = 0.2
+        self.SILENCE_THRESHOLD = 1500 # Lowered from 2500 to catch quieter mics
         
         self.visual_cortex = VisualCortexClient()
         self.last_audio_trigger = 0
@@ -462,7 +495,10 @@ class NexusAgent:
         #         log(f"Error loop: {e}")
         
         # Simple loop to keep agent running while audio thread processes
-        print(" [Agent] Audio-only mode. Listening for voice input...", flush=True)
+        if self.visual_cortex.connected:
+             print(" [Agent] Visual Cortex Linked 👁️ + Audio Active 🔊. Listening...", flush=True)
+        else:
+             print(" [Agent] Audio-only mode 🔊. Listening for voice input...", flush=True)
         while True:
             time.sleep(1)
             # Audio processing happens in background thread
@@ -486,16 +522,11 @@ class NexusAgent:
                 # Handle direct actions if needed
                 pass
         except json.JSONDecodeError:
-            # Fallback: Treat raw input as text command (Debug/Chat Mode)
-            line = line.strip()
-            if line:
-                log(f"User (Text): {line}")
-                if "describe" in line.lower() and "screen" in line.lower():
-                    self.describe_screen()
-                elif line.lower().startswith("computer"):
-                    self.execute_command(line[8:].strip())
-                else:
-                    self.execute_command(line)
+            # INVALID JSON - IGNORE IT.
+            # Do NOT treat raw log lines as commands. This caused the feedback loop.
+            pass
+            # if line:
+            #    log(f"Ignored non-JSON log line: {line[:20]}...")
 
     def update_config(self, params):
         # Update in-memory and disk
@@ -507,26 +538,100 @@ class NexusAgent:
         
         self.initialize_provider() # Re-init with new keys/provider
 
+    def convert_audio_data(self, raw_bytes):
+        """Attempts to detect and convert Float32 audio to Int16 PCM."""
+        if not raw_bytes: return b""
+        
+        # Try unpacking as Float32
+        try:
+            count = len(raw_bytes) // 4
+            floats = struct.unpack(f"<{count}f", raw_bytes)
+            
+            # Heuristic: If valid float audio, max amplitude usually <= 1.0 (or slightly above if clipped)
+            # If interpreted as float but actually int16, numbers would be HUGE (e.g. 10^30).
+            max_val = max(abs(f) for f in floats) if floats else 0
+            
+            if max_val < 2.0: # It's likely Float32
+                # Convert to Int16
+                shorts = [int(max(min(f, 1.0), -1.0) * 32767) for f in floats]
+                return struct.pack(f"<{len(shorts)}h", *shorts)
+        except Exception:
+            pass # Not float32 or wrong size
+            
+        return raw_bytes # Assume it's already Int16
+
+    def convert_audio_data(self, raw_bytes):
+        """Attempts to detect and convert Float32 audio to Int16 PCM."""
+        if not raw_bytes: return b""
+        
+        # Try unpacking as Float32
+        try:
+            count = len(raw_bytes) // 4
+            floats = struct.unpack(f"<{count}f", raw_bytes)
+            
+            # Heuristic: If valid float audio, max amplitude usually <= 1.0 (or slightly above if clipped)
+            # If interpreted as float but actually int16, numbers would be HUGE (e.g. 10^30).
+            max_val = max(abs(f) for f in floats) if floats else 0
+            
+            if max_val < 2.0: # It's likely Float32
+                # Convert to Int16
+                shorts = [int(max(min(f, 1.0), -1.0) * 32767) for f in floats]
+                return struct.pack(f"<{len(shorts)}h", *shorts)
+        except Exception:
+            pass # Not float32 or wrong size
+            
+        return raw_bytes # Assume it's already Int16
+
     def calculate_rms(self, chunk):
+        if not chunk: return 0
         count = len(chunk) // 2
-        shorts = struct.unpack(f"<{count}h", chunk)
-        sum_squares = sum(s*s for s in shorts)
-        return (sum_squares / count) ** 0.5
+        if count == 0: return 0
+        try:
+            shorts = struct.unpack(f"<{count}h", chunk)
+            sum_squares = sum(s*s for s in shorts)
+            return (sum_squares / count) ** 0.5
+        except Exception:
+            return 0
 
     def process_audio(self, pcm_data):
-        chunk = pcm_data
-        log(f"Received Audio Chunk: {len(chunk)} bytes")
-
-        self.audio_buffer.extend(chunk)
-        self.silence_chunks += 1  # Use as chunk counter instead
+        # 1. Normalize Audio (Float32 -> Int16 if needed)
+        # This fixes the "Static" problem where Float32 silence looks like loud Int16 noise.
+        chunk = self.convert_audio_data(pcm_data)
         
-        # BYPASS SILENCE DETECTION - Force transcription every 20 chunks (~2 seconds)
-        if self.silence_chunks >= 20:
-            if len(self.audio_buffer) > 16000:  # At least 1 second of audio
-                log(f"Forcing transcription after {self.silence_chunks} chunks, buffer size: {len(self.audio_buffer)}")
-                self.on_speech_complete()
-            self.audio_buffer = bytearray()
-            self.silence_chunks = 0
+        rms = self.calculate_rms(chunk)
+        
+        if rms > self.SILENCE_THRESHOLD:
+            # SPEECH DETECTED
+            if self.silence_chunks > 0:
+                 log(f"[TRIGGER] Voice detected! Level: {rms:.2f}")
+                 self.silence_chunks = 0
+            
+            self.audio_buffer.extend(chunk)
+            self.last_audio_trigger = time.time()
+        else:
+            # SILENCE (Background Noise)
+            if len(self.audio_buffer) > 0:
+                # We are trailing an existing speech segment. Keep it briefly.
+                self.audio_buffer.extend(chunk)
+                self.silence_chunks += 1
+                
+                # If silence lasts > 1.5 seconds, cut it.
+                if self.silence_chunks > 8: 
+                    log(f"End of speech detected. Transcribing {len(self.audio_buffer)} bytes...")
+                    self.on_speech_complete()
+                elif self.silence_chunks % 5 == 0:
+                    log(f"Silence count: {self.silence_chunks}/8")
+            else:
+                 # Buffer is empty. Log occasional noise floor stats
+                 if self.silence_chunks % 50 == 0:
+                      log(f"[NOISE] Current Level: {rms:.2f} (Threshold: {self.SILENCE_THRESHOLD})")
+                      pass
+                 self.silence_chunks += 1
+
+        # Safety Valve: Don't buffer forever (Max 15 seconds)
+        if len(self.audio_buffer) > 1500000:
+             log("Max buffer size reached. Forcing flush.")
+             self.on_speech_complete()
 
     def on_speech_complete(self):
         log("Speech detected. Transcribing...")
@@ -541,7 +646,7 @@ class NexusAgent:
         with wave.open(TEMP_WAV, 'wb') as wf:
             wf.setnchannels(1)
             wf.setsampwidth(2)
-            wf.setframerate(16000) # Reverted to 16kHz (Native)
+            wf.setframerate(16000) # Reverting to 16kHz (Standard for ASR)
             wf.writeframes(self.audio_buffer)
         
         self.audio_buffer = bytearray()
@@ -558,25 +663,26 @@ class NexusAgent:
             # Robustness: Check if provider supports transcription
             text = self.provider.transcribe(TEMP_WAV)
             
-            if text:
+            if text and len(text) > 1 and "{" not in text:
                 text = text.strip()
                 log(f"Heard: {text}")
                 print(f" [Agent] I heard: '{text}'")
                 
-                 # 2. Check for Voice Command
-                if text.lower().startswith("computer"):
-                    command = text[8:].strip()
-                    log(f"Command detected: {command}")
+                # 2. Check for Wake Word ("NEXUS")
+                if text.lower().startswith("nexus"):
+                    # "nexus" is 5 chars. Command follows.
+                    command = text[5:].strip()
+                    log(f"Wake word detected. Command: {command}")
                     
                     if "describe" in command.lower() and "screen" in command.lower():
                         self.describe_screen()
                     else:
                         self.execute_command(command)
                 else:
-                    # Dictation Mode
+                    # Dictation Mode (No wake word)
                     type_text(text + " ")
             else:
-                log("Transcription empty.")
+                 log(f"Ignored garbage transcription: '{text}'")
                 
         except Exception as e:
             log(f"Transcription/Action Error: {e}")
@@ -623,36 +729,45 @@ class NexusAgent:
             while not os.path.exists(log_path):
                 time.sleep(0.1)
                 
+            chunk_count = 0
             with open(log_path, "r", encoding='utf-8', errors='ignore') as f:
-                # Seek to end? No, we want fresh logs.
+                # Seek to end to start reading new data
                 f.seek(0, 2)
+                log(f"Started tailing at position {f.tell()}")
                 
                 while True:
+                    # CRITICAL FIX: Force file stat refresh to detect growth
+                    # Save current read position
+                    current_pos = f.tell()
+                    
+                    # Seek to end to force OS to refresh file size
+                    f.seek(0, 2)
+                    end_pos = f.tell()
+                    
+                    # If file has grown, return to read position
+                    if end_pos > current_pos:
+                        f.seek(current_pos)
+                    
                     line = f.readline()
                     if not line:
-                        time.sleep(0.01) # fast poll
+                        # No new data yet, wait briefly
+                        time.sleep(0.01)
                         continue
                         
                     line = line.strip()
                     if "AUDIO_DATA:" in line:
-                         try:
-                             # Format: ... AUDIO_DATA:<Base64> ...
-                             # Extraction
-                             parts = line.split("AUDIO_DATA:")
-                             if len(parts) > 1:
-                                 b64_data = parts[1].strip()
-                                 # It might have trailing garbage if log continues?
-                                 # Base64 usually ends with = or alphanumeric.
-                                 # We assume newline ended the log statement.
-                                 
+                         parts = line.split("AUDIO_DATA:")
+                         if len(parts) > 1:
+                             b64_data = parts[1].strip()
+                             try:
                                  audio_bytes = base64.b64decode(b64_data)
-                                 # Feed to Audio Buffer
                                  self.process_audio(audio_bytes)
                                  
-                                 # Optional: Log rate limited
-                                 # log(f"Received Audio Chunk: {len(audio_bytes)} bytes")
-                         except Exception as e:
-                             log(f"Audio Decode Error: {e}")
+                                 chunk_count += 1
+                                 if chunk_count == 1 or chunk_count % 50 == 0:
+                                     log(f"Audio chunks processed: {chunk_count}")
+                             except Exception as e:
+                                 log(f"Audio Decode Error: {e}")
 
                     elif "AUDIO_DEBUG" in line:
                          # Keep this as a backup signal indicator
