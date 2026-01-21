@@ -194,7 +194,7 @@ class VisualCortexClient:
         
         if header.frame_index > self.last_frame_index:
             self.last_frame_index = header.frame_index
-            log(f"New Frame: {header.width}x{header.height} #{header.frame_index} ts={header.timestamp_us}")
+            # log(f"New Frame: {header.width}x{header.height} #{header.frame_index} ts={header.timestamp_us}") # SILENCED FOR PERFORMANCE
             return header
         return None
 
@@ -243,7 +243,7 @@ class VisualCortexClient:
             description = self.provider.generate_vision("Describe what is happening on this screen in detail.", img)
             log(f"I see: {description}")
             print(f" [Agent] I see: {description}")
-
+            
 def type_text(text):
     log(f"Typing text: {text}")
     for char in text:
@@ -483,104 +483,35 @@ class NexusAgent:
             msvcrt.setmode(sys.stdin.fileno(), os.O_BINARY)
             sys.stdout.reconfigure(encoding='utf-8')
 
-        # DISABLED stdin processing - only use audio from log file
-        # while True:
-        #     try:
-        #         line = sys.stdin.readline()
-        #         if not line:
-        #             break
-        #         self.check_vision()
-        #         self.handle_message(line)
-        #     except Exception as e:
-        #         log(f"Error loop: {e}")
-        
-        # Simple loop to keep agent running while audio thread processes
         if self.visual_cortex.connected:
              print(" [Agent] Visual Cortex Linked 👁️ + Audio Active 🔊. Listening...", flush=True)
+             print(" [Agent] AUTO-BENCHMARK MODE ACTIVE: Switch tabs and scroll/play video to test FPS!", flush=True)
         else:
              print(" [Agent] Audio-only mode 🔊. Listening for voice input...", flush=True)
+        
+        # AUTO-BENCHMARK LOOP
+        frame_count = 0
+        last_time = time.time()
+        
         while True:
-            time.sleep(1)
-            # Audio processing happens in background thread
-
-
-    def check_vision(self):
-        # Poll Visual Cortex
-        header = self.visual_cortex.get_latest_frame()
-        if header:
-            log(f"Visual Cortex Frame: {header.width}x{header.height} #{header.frame_index}")
-
-    def handle_message(self, line):
-        try:
-            msg = json.loads(line)
-            method = msg.get("method")
-            if method == "audio.stream":
-                self.process_audio(msg["params"])
-            elif method == "config.update":
-                self.update_config(msg["params"])
-            elif method == "agent.action":
-                # Handle direct actions if needed
-                pass
-        except json.JSONDecodeError:
-            # INVALID JSON - IGNORE IT.
-            # Do NOT treat raw log lines as commands. This caused the feedback loop.
-            pass
-            # if line:
-            #    log(f"Ignored non-JSON log line: {line[:20]}...")
-
-    def update_config(self, params):
-        # Update in-memory and disk
-        for k, v in params.items():
-            self.config[k] = v
-        
-        with open(os.path.join(os.path.dirname(__file__), "config.json"), "w") as f:
-            json.dump(self.config, f, indent=2)
-        
-        self.initialize_provider() # Re-init with new keys/provider
-
-    def convert_audio_data(self, raw_bytes):
-        """Attempts to detect and convert Float32 audio to Int16 PCM."""
-        if not raw_bytes: return b""
-        
-        # Try unpacking as Float32
-        try:
-            count = len(raw_bytes) // 4
-            floats = struct.unpack(f"<{count}f", raw_bytes)
+            # Poll for frames as fast as possible
+            if self.visual_cortex.connected:
+                header = self.visual_cortex.get_latest_frame()
+                if header:
+                    frame_count += 1
             
-            # Heuristic: If valid float audio, max amplitude usually <= 1.0 (or slightly above if clipped)
-            # If interpreted as float but actually int16, numbers would be HUGE (e.g. 10^30).
-            max_val = max(abs(f) for f in floats) if floats else 0
+            # FPS Report every 1.0s
+            now = time.time()
+            if now - last_time >= 1.0:
+                elapsed = now - last_time
+                fps = frame_count / elapsed
+                if fps > 0:
+                    print(f" [Agent] Input FPS: {fps:.2f} (Frames: {frame_count})", flush=True)
+                frame_count = 0
+                last_time = now
             
-            if max_val < 2.0: # It's likely Float32
-                # Convert to Int16
-                shorts = [int(max(min(f, 1.0), -1.0) * 32767) for f in floats]
-                return struct.pack(f"<{len(shorts)}h", *shorts)
-        except Exception:
-            pass # Not float32 or wrong size
-            
-        return raw_bytes # Assume it's already Int16
-
-    def convert_audio_data(self, raw_bytes):
-        """Attempts to detect and convert Float32 audio to Int16 PCM."""
-        if not raw_bytes: return b""
-        
-        # Try unpacking as Float32
-        try:
-            count = len(raw_bytes) // 4
-            floats = struct.unpack(f"<{count}f", raw_bytes)
-            
-            # Heuristic: If valid float audio, max amplitude usually <= 1.0 (or slightly above if clipped)
-            # If interpreted as float but actually int16, numbers would be HUGE (e.g. 10^30).
-            max_val = max(abs(f) for f in floats) if floats else 0
-            
-            if max_val < 2.0: # It's likely Float32
-                # Convert to Int16
-                shorts = [int(max(min(f, 1.0), -1.0) * 32767) for f in floats]
-                return struct.pack(f"<{len(shorts)}h", *shorts)
-        except Exception:
-            pass # Not float32 or wrong size
-            
-        return raw_bytes # Assume it's already Int16
+            # Yield slightly to prevent 100% CPU core usage if idle
+            time.sleep(0.001)
 
     def calculate_rms(self, chunk):
         if not chunk: return 0
@@ -592,6 +523,29 @@ class NexusAgent:
             return (sum_squares / count) ** 0.5
         except Exception:
             return 0
+
+    def convert_audio_data(self, raw_bytes):
+        # ... (Same as before)
+        """Attempts to detect and convert Float32 audio to Int16 PCM."""
+        if not raw_bytes: return b""
+        
+        # Try unpacking as Float32
+        try:
+            count = len(raw_bytes) // 4
+            floats = struct.unpack(f"<{count}f", raw_bytes)
+            
+            # Heuristic: If valid float audio, max amplitude usually <= 1.0 (or slightly above if clipped)
+            # If interpreted as float but actually int16, numbers would be HUGE (e.g. 10^30).
+            max_val = max(abs(f) for f in floats) if floats else 0
+            
+            if max_val < 2.0: # It's likely Float32
+                # Convert to Int16
+                shorts = [int(max(min(f, 1.0), -1.0) * 32767) for f in floats]
+                return struct.pack(f"<{len(shorts)}h", *shorts)
+        except Exception:
+            pass # Not float32 or wrong size
+            
+        return raw_bytes # Assume it's already Int16
 
     def process_audio(self, pcm_data):
         # 1. Normalize Audio (Float32 -> Int16 if needed)
@@ -668,6 +622,11 @@ class NexusAgent:
                 log(f"Heard: {text}")
                 print(f" [Agent] I heard: '{text}'")
                 
+                # VERIFICATION SHORTCUT: Allow "benchmark" without wake word
+                if "benchmark" in text.lower():
+                    self.benchmark_system()
+                    return
+
                 # 2. Check for Wake Word ("NEXUS")
                 if text.lower().startswith("nexus"):
                     # "nexus" is 5 chars. Command follows.
@@ -676,6 +635,8 @@ class NexusAgent:
                     
                     if "describe" in command.lower() and "screen" in command.lower():
                         self.describe_screen()
+                    elif "benchmark" in command.lower():
+                        self.benchmark_system()
                     else:
                         self.execute_command(command)
                 else:
@@ -686,6 +647,43 @@ class NexusAgent:
                 
         except Exception as e:
             log(f"Transcription/Action Error: {e}")
+
+    def benchmark_system(self, duration=5.0):
+        if not self.visual_cortex.connected:
+             print(" [Agent] Cannot benchmark: Visual Cortex Disconnected.", flush=True)
+             return
+
+        print(f" [Agent] Starting {duration}s Benchmark...", flush=True)
+        count = 0
+        latencies = []
+        start_time = time.time()
+        
+        while time.time() - start_time < duration:
+            header = self.visual_cortex.get_latest_frame()
+            if header:
+                # Calculate Latency (C++ Timestamp vs Python Time)
+                # Timestamp is DeltaSinceWindowsEpoch in Microseconds
+                # We need to be careful with clocks. 
+                # Ideally, we just check relative delta if clocks are synced, 
+                # but C++ base::Time::Now() should align with Python time.time() roughly.
+                
+                # Conversion: Windows Epoch (1601) vs Unix Epoch (1970). 
+                # Actually base::Time::ToDeltaSinceWindowsEpoch() is raw. 
+                # base::Time::Now().InSecondsFSinceUnixEpoch() is better for comparison, 
+                # but we used ToDelta... in C++.
+                # Let's rely on frame delta time for FPS primarily.
+                
+                # Actually, let's just count FPS for now as implicit throughput verification.
+                count += 1
+            
+            time.sleep(0.001) # Yield slightly
+            
+        elapsed = time.time() - start_time
+        fps = count / elapsed
+        print(f" [Agent] Benchmark Complete.", flush=True)
+        print(f" [Agent] Frames Processed: {count}", flush=True)
+        print(f" [Agent] Average FPS: {fps:.2f}", flush=True)
+        log(f"Benchmark: {count} frames in {elapsed:.2f}s = {fps:.2f} FPS")
 
     def execute_command(self, command):
         # Ask the LLM what to do
@@ -777,6 +775,30 @@ class NexusAgent:
                          self.handle_message(line)
         except Exception as e:
             log(f"Log Tail Error: {e}")
+
+    def handle_message(self, line):
+        try:
+            msg = json.loads(line)
+            method = msg.get("method")
+            if method == "audio.stream":
+                self.process_audio(msg["params"])
+            elif method == "config.update":
+                self.update_config(msg["params"])
+            elif method == "agent.action":
+                # Handle direct actions if needed
+                pass
+        except json.JSONDecodeError:
+            pass
+
+    def update_config(self, params):
+        # Update in-memory and disk
+        for k, v in params.items():
+            self.config[k] = v
+        
+        with open(os.path.join(os.path.dirname(__file__), "config.json"), "w") as f:
+            json.dump(self.config, f, indent=2)
+        
+        self.initialize_provider() # Re-init with new keys/provider
 
 if __name__ == "__main__":
     # Standalone Mode (Default)

@@ -59,7 +59,12 @@ echo.
 
 REM Launch Chrome
 echo [4/4] Launching Neural-Chromium...
-start "" cmd /c "c:\operation-greenfield\neural-chromium\src\out\AgentDebug\chrome.exe --enable-logging --v=1 --disable-features=OnDeviceSpeechRecognition --vmodule=network_speech_recognition_engine_impl=1 --user-data-dir=C:\tmp\neural_chrome_profile 2> C:\tmp\neural_chrome_profile\chrome_debug.log"
+start "" cmd /c "c:\operation-greenfield\neural-chromium\src\out\AgentDebug\chrome.exe --in-process-gpu --disable-gpu --disable-software-rasterizer --enable-logging --v=1 --disable-features=OnDeviceSpeechRecognition --vmodule=network_speech_recognition_engine_impl=1 --user-data-dir=C:\tmp\neural_chrome_profile 2> C:\tmp\neural_chrome_profile\chrome_debug.log"
+echo     Done.
+echo.
+
+echo [5/5] Opening Log Monitor...
+start "Chrome Logs" powershell -NoProfile -ExecutionPolicy Bypass -Command "Get-Content -Wait -Path C:\tmp\neural_chrome_profile\chrome_debug.log"
 echo     Done.
 echo.
 

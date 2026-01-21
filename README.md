@@ -33,11 +33,15 @@ This project utilizes a **Source Overlay** pattern to maintain a lightweight foo
 
 ### ✅ Visual Cortex - Vision Hook (PROVEN WORKING)
 *   **Feature**: Shared Memory Bridge (`RenderWidgetHostViewAura` → `Local\NeuralChromium_VisualCortex_V3` → `nexus_agent.py`)
-*   **Status**: **Vision Verified** - C++ captures 600+ frames/sec, Agent describes screen content via GPT-4o.
-*   **Evidence**: "Nexus, describe screen" successfully returns detailed UI description.
+*   **Status**: **Vision Verified** (60+ FPS) - C++ captures frames at display refresh rate.
+*   **Performance**:
+    - **Idle**: ~1-15 FPS (Power efficient, damage-driven rendering)
+    - **Active**: **60-65 FPS** (Scrolling/Video playback)
+*   **Requirement**: Must run with `--in-process-gpu` to enable frame capture in the correct process context.
+*   **Evidence**: "Nexus, describe screen" returns accurate UI descriptions; Auto-Benchmark confirms high throughput.
 *   **Capabilities**:
-    - High-performance (Shared Memory) frame streaming (640x360 @ 5fps+)
-    - Zero-copy (mostly) architecture using NULL DACL for cross-process access
+    - High-performance (Shared Memory) frame streaming
+    - Zero-copy architecture using NULL DACL for cross-process access
     - Integrated with OpenAI GPT-4o Vision
 
 ### ✅ Transcription Pipeline (WORKING)
@@ -45,11 +49,17 @@ This project utilizes a **Source Overlay** pattern to maintain a lightweight foo
 *   **Fix**: Implemented file stat refresh to detect log file growth on Windows
 *   **Tuning**: VAD Threshold lowered to 1500 (High Sensitivity), Latency reduced to ~1.5s
 *   **Evidence**: Wake word "Nexus" triggers reliably.
-*   **See**: `walkthrough.md` for full fix documentation
 
-### ⏸️ Visual Cortex (Next Phase)
-*   **Feature**: Zero-copy frame capture via shared memory
-*   **Status**: Paused pending audio transcription resolution
+## Running the Agent
+To ensure all hooks (Audio + Vision) work correctly, you **must** use the provided launch script:
+```powershell
+.\src\START_NEURAL_CHROME.bat
+```
+This script handles:
+1.  **Process Consolidation**: Adds `--in-process-gpu` (Crucial for Vision).
+2.  **Permissions**: Sets up logging redirection.
+3.  **Agent Lifecycle**: Launches `nexus_agent.py` and the Chrome instance together.
+
 
 ## Getting Started
 

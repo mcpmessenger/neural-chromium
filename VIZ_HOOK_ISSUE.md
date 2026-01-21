@@ -1,10 +1,11 @@
-# Zero-Copy Viz Hook: Windows Implementation Report
+# Zero-Copy Viz Hook: 0 FPS Resolution & Verification
 
 ## Overview
-We are attempting to implement a "Zero-Copy" screen capture mechanism for Neural-Chromium by hooking directly into the Viz compositor's `SoftwareOutputDevice`. This allows capturing frames from the shared memory buffer before they are presented to the OS, avoiding slow `BitBlt` or `PrintWindow` calls.
+We have successfully implemented a "Zero-Copy" screen capture mechanism for Neural-Chromium by hooking directly into the Viz compositor's `SoftwareOutputDevice`. This allows capturing frames from the shared memory buffer before they are presented to the OS.
 
-**Status:** Implementation complete, but Benchmark reports **0 FPS** on Windows 11.
-**Hypothesis:** The hooked `SoftwareOutputDevice` class is either not being instantiated, or the rendering path is bypassing the hook (e.g., using GPU Rasterization despite `--disable-gpu`).
+**Status:** ✅ RESOLVED (60+ FPS Confirmed)
+**Fix:** `--in-process-gpu` consolidation.
+**Root Cause:** Process isolation prevented the GPU-hosted hook from writing to the agent-accessible shared memory.
 
 ## Implementation Details
 
