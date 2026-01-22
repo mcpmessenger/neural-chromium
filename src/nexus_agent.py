@@ -1,4 +1,5 @@
 import sys
+import re
 import json
 import base64
 import os
@@ -41,6 +42,11 @@ try:
     import pychrome
 except ImportError:
     pychrome = None
+
+try:
+    import ollama
+except ImportError:
+    ollama = None
 
 # --- Windows Input Injection (ctypes) ---
 user32 = ctypes.windll.user32
@@ -882,6 +888,45 @@ class AnthropicProvider(LLMProvider):
         return "Anthropic Vision not implemented yet."
 
 
+class OllamaProvider(LLMProvider):
+    def __init__(self, model_name="llama3.2-vision"):
+        if not ollama:
+            raise ImportError("ollama module not installed. pip install ollama")
+        self.model_name = model_name
+
+    def generate_text(self, prompt: str) -> str:
+        response = ollama.chat(model=self.model_name, messages=[
+            {'role': 'user', 'content': prompt}
+        ])
+        return response['message']['content']
+
+    def transcribe(self, audio_path: str) -> str:
+        return "" # Ollama doesn't support audio transcription natively yet
+
+    def generate_vision(self, prompt: str, image) -> str:
+        # Image is expected to be a PIL Image
+        # Convert to bytes for Ollama
+        buffered = io.BytesIO()
+        image.save(buffered, format="PNG")
+        img_bytes = buffered.getvalue()
+
+        # System prompt to enforce JSON
+        messages = [
+            {
+                'role': 'system', 
+                'content': 'You are a precise browser automation agent. You must output ONLY valid JSON. Coordinates must be absolute pixels based on the image provided.'
+            },
+            {
+                'role': 'user',
+                'content': prompt,
+                'images': [img_bytes]
+            }
+        ]
+
+        response = ollama.chat(model=self.model_name, messages=messages)
+        return response['message']['content']
+
+
 class MockProvider(LLMProvider):
     """Fallback provider for testing infrastructure without API keys"""
     def generate_text(self, prompt): return "I am a Mock Agent. Set your API keys to make me smart."
@@ -907,8 +952,8 @@ class NexusAgent:
 
 
     def initialize_provider(self):
-        requested = self.config.get("active_provider", "openai")
-        providers = [requested, "gemini", "openai", "mock"] # Added Mock
+        requested = self.config.get("active_provider", "ollama") # Default to ollama for this sprint
+        providers = [requested, "ollama", "gemini", "openai", "mock"] # Added Ollama
         
         # Deduplicate while preserving order
         seen = set()
@@ -935,6 +980,11 @@ class NexusAgent:
                         self.provider = AnthropicProvider(key)
                         log(f"Provider {p_name} initialized successfully.")
                         return
+                elif p_name == "ollama":
+                    model = self.config.get("ollama_model", "llama3.2-vision")
+                    self.provider = OllamaProvider(model_name=model)
+                    log(f"Provider {p_name} initialized successfully with model {model}.")
+                    return
                 elif p_name == "mock":
                     self.provider = MockProvider()
                     log("Fallback to MockProvider (Echo Mode).")
@@ -1190,6 +1240,17 @@ class NexusAgent:
                 pass
 
     def process_text_command(self, text):
+        # --- INPUT SANITIZATION ---
+        # Fix for console paste "jamming" where text is repeated (e.g. "nexus type xnexus type x")
+        if len(text) > 20: # Only check reasonably long strings
+            # Check for simple repetition: "A A" or "AA"
+            # Regex captures a group of at least 10 chars that repeats at least once at the start of the string
+            match = re.match(r"^(.{10,}?)\1+$", text, flags=re.DOTALL)
+            if match:
+                sanitized = match.group(1)
+                log(f"🧹 Input Sanitized: Detected repeated pattern. Reduced from {len(text)} to {len(sanitized)} chars.")
+                text = sanitized
+        
         # 1. Check for Wake Word ("NEXUS")
         # VERIFICATION SHORTCUT: Allow "benchmark" without wake word
         if "benchmark" in text.lower():
@@ -1305,6 +1366,37 @@ class NexusAgent:
             return
 
         # 2. Construct Prompt with Image
+        # --- Preprocessing: Naive Dynamic Resolution ---
+        if img:
+             # Qwen2.5-VL/Llama3.2-Vision work best with images divisible by 28
+             # AND we want to limit size for speed (e.g. max 960px dimension)
+            original_width, original_height = img.size
+            MAX_DIMENSION = 960 
+            
+            scale_ratio = 1.0
+            if original_width > MAX_DIMENSION or original_height > MAX_DIMENSION:
+                scale_ratio = min(MAX_DIMENSION / original_width, MAX_DIMENSION / original_height)
+                
+            new_w = int(original_width * scale_ratio)
+            new_h = int(original_height * scale_ratio)
+            
+            # Align to 28 (Grid requirement for some VLMs)
+            new_w = (new_w // 28) * 28
+            new_h = (new_h // 28) * 28
+            
+            # Ensure at least 28x28
+            new_w = max(28, new_w)
+            new_h = max(28, new_h)
+            
+            # Resize
+            if scale_ratio < 1.0 or new_w != original_width:
+                 img = img.resize((new_w, new_h))
+                 log(f"🖼️ Vision Resize: {original_width}x{original_height} -> {new_w}x{new_h}")
+            
+            # Logic Double Back Support:
+            # We must remember this scale factor to map VLM coordinates back to the screen
+            self.last_vision_scale = (original_width / new_w, original_height / new_h)
+        
         # We need a strict JSON schema for the Action
         prompt = f"""
         User command: '{command}'
@@ -1340,6 +1432,13 @@ class NexusAgent:
             if action == "click":
                 x = plan.get("x")
                 y = plan.get("y")
+                
+                # Logic Double Back: Scale coordinates back to original screen size
+                if hasattr(self, 'last_vision_scale'):
+                    sx, sy = self.last_vision_scale
+                    x = int(x * sx)
+                    y = int(y * sy)
+                    log(f"📍 Logic Double Back: Scaling ({plan.get('x')}, {plan.get('y')}) -> ({x}, {y})")
                 
                 # Try Extension first
                 if self.extension.connected:
