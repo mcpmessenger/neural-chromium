@@ -1,38 +1,65 @@
 // Neural-Chromium Browser Control Extension
-// Background Service Worker - Handles Native Messaging
+// Background Service Worker - WebSocket Client Architecture
 
-const NATIVE_HOST = 'com.neural_chromium.browser_control';
-let nativePort = null;
+const WS_URL = 'ws://127.0.0.1:9223';
+let socket = null;
+let heartbeatInterval = null;
 
-// Connect to Python agent via Native Messaging
-function connectNative() {
-    try {
-        nativePort = chrome.runtime.connectNative(NATIVE_HOST);
+// Connect to the Standalone Python Server
+function connectWebSocket() {
+    console.log('[Extension] Connecting to WebSocket Server:', WS_URL);
+    socket = new WebSocket(WS_URL);
 
-        nativePort.onMessage.addListener((message) => {
-            console.log('[Extension] Received from Python:', message);
+    socket.onopen = () => {
+        console.log('[Extension] WebSocket Connected');
+        // Register as "browser"
+        socket.send(JSON.stringify({ type: 'browser' }));
+
+        // Start Heartbeat to keep Service Worker alive (Chrome 116+)
+        startHeartbeat();
+    };
+
+    socket.onmessage = (event) => {
+        try {
+            const message = JSON.parse(event.data);
+            console.log('[Extension] Received:', message);
             handleCommand(message);
-        });
+        } catch (error) {
+            console.error('[Extension] Message error:', error);
+        }
+    };
 
-        nativePort.onDisconnect.addListener(() => {
-            console.log('[Extension] Native host disconnected');
-            if (chrome.runtime.lastError) {
-                console.error('[Extension] Disconnect error:', chrome.runtime.lastError.message);
-            }
-            nativePort = null;
-            // Retry connection after 2 seconds
-            setTimeout(connectNative, 2000);
-        });
+    socket.onclose = () => {
+        console.log('[Extension] WebSocket Disconnected. Retrying in 5s...');
+        stopHeartbeat();
+        socket = null;
+        setTimeout(connectWebSocket, 5000);
+    };
 
-        console.log('[Extension] Connected to native host');
-    } catch (error) {
-        console.error('[Extension] Failed to connect to native host:', error);
-        // Retry after 2 seconds
-        setTimeout(connectNative, 2000);
+    socket.onerror = (error) => {
+        console.error('[Extension] WebSocket Error:', error);
+    };
+}
+
+function startHeartbeat() {
+    stopHeartbeat();
+    heartbeatInterval = setInterval(() => {
+        if (socket && socket.readyState === WebSocket.OPEN) {
+            // Send traffic to reset Service Worker idle timer
+            // Sending 'pong' (unsolicited) is handled by server as keep-alive
+            socket.send(JSON.stringify({ pong: true }));
+        }
+    }, 20000); // 20 seconds
+}
+
+function stopHeartbeat() {
+    if (heartbeatInterval) {
+        clearInterval(heartbeatInterval);
+        heartbeatInterval = null;
     }
 }
 
-// Handle commands from Python agent
+// Handle commands from Agent
 async function handleCommand(message) {
     const { id, action, params } = message;
     let result = { id, success: false };
@@ -51,214 +78,135 @@ async function handleCommand(message) {
             case 'click':
                 result = await executeClick(tab.id, params);
                 break;
-
             case 'type':
                 result = await executeType(tab.id, params);
                 break;
-
             case 'press_key':
                 result = await executePressKey(tab.id, params);
                 break;
-
             case 'navigate':
                 result = await executeNavigate(tab.id, params);
                 break;
-
-            case 'execute_js':
-                result = await executeJS(tab.id, params);
-                break;
-
             case 'get_dom':
                 result = await getDOM(tab.id);
                 break;
-
+            case 'execute_js':
+                result = await executeJS(tab.id, params);
+                break;
             case 'ping':
-                // Send pong to keep connection alive bi-directionally
+                // Agent might ping us?
                 result = { pong: true };
                 break;
-
             default:
-                // Ignore 'connected' message or other status messages
-                if (message.status === 'connected') {
-                    return; // Don't send response
-                }
                 result.error = `Unknown action: ${action}`;
         }
-
-        result.id = id;
-        result.success = !result.error;
 
     } catch (error) {
         result.error = error.message;
     }
 
+    // Ensure ID is preserved for response correlation
+    result.id = id;
     sendResponse(result);
 }
 
 function sendResponse(result) {
-    if (nativePort) {
-        nativePort.postMessage(result);
+    if (socket && socket.readyState === WebSocket.OPEN) {
+        socket.send(JSON.stringify(result));
     }
 }
 
-// Execute click at coordinates
-async function executeClick(tabId, params) {
-    const { x, y } = params;
+// --- Action Implementations (Same as before) ---
 
+async function executeClick(tabId, params) {
     try {
-        const result = await chrome.scripting.executeScript({
+        const res = await chrome.scripting.executeScript({
             target: { tabId },
             func: (x, y) => {
-                const element = document.elementFromPoint(x, y);
-                if (element) {
-                    element.click();
-                    return { success: true, element: element.tagName };
-                }
-                return { success: false, error: 'No element at coordinates' };
+                const el = document.elementFromPoint(x, y);
+                if (el) { el.click(); return { success: true, tag: el.tagName }; }
+                return { success: false, error: 'No element' };
             },
-            args: [x, y]
+            args: [params.x, params.y]
         });
-
-        return result[0].result;
-    } catch (error) {
-        return { success: false, error: error.message };
-    }
+        return res[0].result;
+    } catch (e) { return { success: false, error: e.message }; }
 }
 
-// Execute typing
 async function executeType(tabId, params) {
-    const { text } = params;
-
     try {
-        const result = await chrome.scripting.executeScript({
+        const res = await chrome.scripting.executeScript({
             target: { tabId },
+            world: 'MAIN',
             func: (text) => {
                 let el = document.activeElement;
-
-                // If nothing focused, find first visible input
-                if (!el || (el.tagName !== 'INPUT' && el.tagName !== 'TEXTAREA' && !el.isContentEditable)) {
-                    el = document.querySelector('input[type="text"]:not([style*="display: none"])') ||
-                        document.querySelector('input[type="search"]') ||
-                        document.querySelector('textarea') ||
-                        document.querySelector('[contenteditable="true"]') ||
-                        document.querySelector('input:not([type="hidden"])');
-
-                    if (el) {
-                        el.focus();
-                        // Wait a bit for focus to take effect
-                        setTimeout(() => { }, 50);
-                    }
+                if (!el || (el.tagName !== 'INPUT' && el.tagName !== 'TEXTAREA')) {
+                    el = document.querySelector('input[type="text"], input[type="search"], textarea');
+                    if (el) el.focus();
                 }
-
-                if (el && (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA')) {
+                if (el) {
                     el.value = text;
                     el.dispatchEvent(new Event('input', { bubbles: true }));
                     el.dispatchEvent(new Event('change', { bubbles: true }));
-                    return { success: true, element: el.tagName, value: el.value };
-                } else if (el && el.isContentEditable) {
-                    el.textContent = text;
-                    el.dispatchEvent(new Event('input', { bubbles: true }));
-                    return { success: true, element: 'contenteditable' };
+                    return {
+                        success: true,
+                        tag: el.tagName,
+                        id: el.id,
+                        className: el.className
+                    };
                 }
-
-                return { success: false, error: 'No input element found', activeElement: el ? el.tagName : 'none' };
+                return { success: false, error: 'No input found' };
             },
-            args: [text]
+            args: [params.text]
         });
-
-        return result[0].result;
-    } catch (error) {
-        return { success: false, error: error.message };
-    }
+        return res[0].result;
+    } catch (e) { return { success: false, error: e.message }; }
 }
 
-// Execute key press
 async function executePressKey(tabId, params) {
-    const { key } = params;
-
     try {
-        const result = await chrome.scripting.executeScript({
+        const res = await chrome.scripting.executeScript({
             target: { tabId },
             func: (key) => {
-                const el = document.activeElement || document.body;
-
-                const keydownEvent = new KeyboardEvent('keydown', { key, bubbles: true, cancelable: true });
-                const keypressEvent = new KeyboardEvent('keypress', { key, bubbles: true, cancelable: true });
-                const keyupEvent = new KeyboardEvent('keyup', { key, bubbles: true, cancelable: true });
-
-                el.dispatchEvent(keydownEvent);
-                el.dispatchEvent(keypressEvent);
-                el.dispatchEvent(keyupEvent);
-
+                document.activeElement.dispatchEvent(new KeyboardEvent('keydown', { key, bubbles: true }));
+                document.activeElement.dispatchEvent(new KeyboardEvent('keypress', { key, bubbles: true }));
+                document.activeElement.dispatchEvent(new KeyboardEvent('keyup', { key, bubbles: true }));
                 return { success: true };
             },
-            args: [key]
+            args: [params.key]
         });
-
-        return result[0].result;
-    } catch (error) {
-        return { success: false, error: error.message };
-    }
+        return res[0].result;
+    } catch (e) { return { success: false, error: e.message }; }
 }
 
-// Navigate to URL
 async function executeNavigate(tabId, params) {
-    const { url } = params;
-
-    try {
-        await chrome.tabs.update(tabId, { url });
-        return { success: true };
-    } catch (error) {
-        return { success: false, error: error.message };
-    }
+    await chrome.tabs.update(tabId, { url: params.url });
+    return { success: true };
 }
 
-// Execute arbitrary JavaScript
-async function executeJS(tabId, params) {
-    const { code } = params;
-
-    try {
-        const result = await chrome.scripting.executeScript({
-            target: { tabId },
-            func: new Function(code)
-        });
-
-        return { success: true, result: result[0].result };
-    } catch (error) {
-        return { success: false, error: error.message };
-    }
-}
-
-// Get simplified DOM
 async function getDOM(tabId) {
+    // Simplify for now
     try {
-        const result = await chrome.scripting.executeScript({
+        const res = await chrome.scripting.executeScript({
             target: { tabId },
-            func: () => {
-                return {
-                    title: document.title,
-                    url: window.location.href,
-                    inputs: Array.from(document.querySelectorAll('input, textarea')).map(el => ({
-                        type: el.type || 'textarea',
-                        placeholder: el.placeholder,
-                        value: el.value,
-                        visible: el.offsetParent !== null
-                    }))
-                };
-            }
+            func: () => ({ title: document.title, url: window.location.href })
         });
-
-        return { success: true, dom: result[0].result };
-    } catch (error) {
-        return { success: false, error: error.message };
-    }
+        return { success: true, dom: res[0].result };
+    } catch (e) { return { success: false, error: e.message }; }
 }
 
-// Initialize on extension load
-chrome.runtime.onInstalled.addListener(() => {
-    console.log('[Extension] Neural-Chromium Browser Control installed');
-    connectNative();
-});
+async function executeJS(tabId, params) {
+    try {
+        const res = await chrome.scripting.executeScript({
+            target: { tabId },
+            func: new Function(params.code)
+        });
+        return { success: true, result: res[0].result };
+    } catch (e) { return { success: false, error: e.message }; }
+}
 
-// Connect on startup
-connectNative();
+// Initialize
+chrome.runtime.onInstalled.addListener(() => {
+    connectWebSocket();
+});
+connectWebSocket();

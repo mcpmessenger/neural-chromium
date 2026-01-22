@@ -6,9 +6,11 @@
     "permissions": [
         "activeTab",
         "scripting",
-        "tabs",
-        "nativeMessaging"
+        "tabs"
     ],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'; connect-src ws://localhost:9223 ws://127.0.0.1:9223"
+    },
     "host_permissions": [
         "<all_urls>"
     ],

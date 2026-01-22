@@ -13,6 +13,11 @@ from abc import ABC, abstractmethod
 
 # --- Dependencies ---
 # pip install openai google-generativeai anthropic
+# pip install websocket-client
+try:
+    import websocket
+except ImportError:
+    pass # Will fail in ExtensionController if not installed
 
 try:
     from openai import OpenAI
@@ -275,56 +280,71 @@ class InputManager:
             log(f"Unknown Special Key: {key_name}")
 
 class ExtensionController:
-    """Controls browser via Chrome Extension (Socket IPC)"""
+    """Controls browser via Standalone WebSocket Server"""
     def __init__(self, port=9223):
-        self.port = port
+        self.url = f"ws://127.0.0.1:{port}"
+        self.ws = None
         self.connected = False
         
-    def send_command(self, action, params):
+    def _connect(self):
         try:
-            with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-                s.settimeout(2)
-                s.connect(('127.0.0.1', self.port))
-                
-                command = {
-                    "id": int(time.time() * 1000),
-                    "action": action,
-                    "params": params
-                }
-                
-                # Send length-prefixed message
-                data = json.dumps(command).encode('utf-8')
-                s.sendall(struct.pack('!I', len(data)) + data)
-                
-                # Read response
-                length_bytes = s.recv(4)
-                if length_bytes:
-                    length = struct.unpack('!I', length_bytes)[0]
-                    resp_data = s.recv(length)
-                    response = json.loads(resp_data.decode('utf-8'))
-                    return response
-        except Exception as e:
-            # log(f"Extension IPC error: {e}") # Too spammy if not connected
-            pass
-        return None
-
-    def check_connection(self):
-        """Check if Native Host is listening"""
-        try:
-            with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-                s.settimeout(0.1)
-                s.connect(('127.0.0.1', self.port))
+            if self.ws:
+                try:
+                    self.ws.close()
+                except:
+                    pass
+            
+            import websocket 
+            self.ws = websocket.create_connection(self.url, timeout=2)
+            
+            # Handshake: Register as Agent
+            self.ws.send(json.dumps({"type": "agent"}))
             self.connected = True
             return True
-        except:
+        except Exception as e:
             self.connected = False
             return False
+
+    def check_connection(self):
+        """Check if WebSocket Server is reachable"""
+        if self.connected:
+            return True
+        return self._connect()
+
+    def send_command(self, action, params):
+        if not self.connected or not self.ws:
+            if not self._connect():
+                return None
+                
+        try:
+            command = {
+                "id": int(time.time() * 1000),
+                "action": action,
+                "params": params
+            }
+            
+            self.ws.send(json.dumps(command))
+            result = self.ws.recv()
+            if result:
+                return json.loads(result)
+                
+        except (BrokenPipeError, websocket.WebSocketException, OSError) as e:
+            log(f"WebSocket Error: {e}")
+            self.connected = False
+            # Retry once
+            if self._connect():
+                return self.send_command(action, params)
+        except Exception as e:
+            log(f"Command Error: {e}")
+            
+        return None
 
     def click(self, x, y):
         resp = self.send_command('click', {'x': x, 'y': y})
         if resp and resp.get('success'):
             log(f"Extension Click: ({x}, {y})")
             return True
+        self._handle_error("Click", resp)
         return False
 
     def type_text(self, text):
@@ -332,6 +352,7 @@ class ExtensionController:
         if resp and resp.get('success'):
             log(f"Extension Typed: {text}")
             return True
+        self._handle_error("Type", resp)
         return False
 
     def press_key(self, key):
@@ -339,7 +360,16 @@ class ExtensionController:
         if resp and resp.get('success'):
             log(f"Extension Key: {key}")
             return True
+        self._handle_error("Key", resp)
         return False
+
+    def _handle_error(self, action, resp):
+        err = resp.get('error', '') if resp else 'Unknown'
+        if "chrome://" in str(err) or "restricted" in str(err):
+            log(f"⚠️  RESTRICTED: Cannot control internal Chrome pages.")
+            log(f"    Please navigate to a real website (e.g. google.com)")
+        else:
+            log(f"Extension {action} Failed: {resp}")
 
     def navigate(self, url):
         resp = self.send_command('navigate', {'url': url})
@@ -366,12 +396,18 @@ class CDPController:
         try:
             self.browser = pychrome.Browser(url=f"http://127.0.0.1:{self.port}")
             tabs = self.browser.list_tab()
+            
+            log("--- [DEBUG] Available CDP Targets ---")
+            for t in tabs:
+                log(f"Target: {t.type} | {t.title} | {t.url}")
+            log("-------------------------------------")
+
             if not tabs:
                 log("No tabs found in Chrome")
                 return False
                 
-            # Use first tab
-            self.tab = tabs[0]
+            # Use first valid page
+            self.tab = next((t for t in tabs if t.type == 'page'), tabs[0])
             self.tab.start()
             
             # Don't enable domains - they should work without explicit enable
@@ -1364,11 +1400,9 @@ class NexusAgent:
             print(f" [Agent] 💥 Action Failed: {e}", flush=True)
 
     def describe_screen(self):
-        # ... (Unchanged)
         log("Analysing Screen...")
         print(" [Agent] Capturing Screen...", flush=True)
         img = self.visual_cortex.capture_image()
-        # ...
         if not img:
             log("No image captured.")
             print(" [Agent] Failed to capture image (Check Connection/PIL).", flush=True)
