@@ -20,7 +20,7 @@ This project utilizes a **Source Overlay** pattern to maintain a lightweight foo
 *   `development_log.md`: Implementation task checklist.
 *   `scripts/`: Utilities for applying changes to and capturing snapshots from a full Chromium build.
 
-## 🧠 Current Status: Visual Cortex Active (Day 4)
+## 🧠 Current Status: Local Intelligence Active (Day 5)
 
 ### ✅ Auditory Cortex - Audio Hook (PROVEN WORKING)
 *   **Feature**: Native Audio Bridge (`NetworkSpeechRecognitionEngineImpl` → `chrome_debug.log` → `nexus_agent.py`)
@@ -43,8 +43,19 @@ This project utilizes a **Source Overlay** pattern to maintain a lightweight foo
     - High-performance (Shared Memory) frame streaming
     - Zero-copy architecture using NULL DACL for cross-process access
     - Zero-copy architecture using NULL DACL for cross-process access
-    - Integrated with **Ollama (Llama 3.2 Vision)** for local, private VLM control.
-    - Cloud fallback available for OpenAI GPT-4o.
+    - **Dynamic Resolution**: Automatic downscaling of large inputs for faster VLM inference.
+
+### ✅ Local Intelligence - Agent Core (PROVEN WORKING)
+*   **Feature**: Local Vision-Language Model Integration (`Ollama` + `llama3.2-vision`)
+*   **Status**: **Functional** - Agent observes screen, plans actions, and executes them.
+*   **Architecture**: 
+    - **Observe**: Screen captured via Visual Cortex (Shared Memory).
+    - **Orient**: Image resized and sent to local Ollama instance.
+    - **Decide**: Llama 3.2 Vision outputs JSON action plan (`click`, `type`, `scroll`).
+    - **Act**: Nexus Agent executes browser commands via Extension or CDP.
+*   **Capabilities**:
+    - **Privacy-First**: No images leave the local machine.
+    - **Resilience**: Handles repeated inputs and connection drops.
 
 ### ✅ Transcription Pipeline (WORKING)
 *   **Status**: Audio continuously processed by Python agent
