@@ -1,0 +1,266 @@
+[
+  {
+    "id": 1,
+    "role": "#document",
+    "name": "",
+    "attributes": {
+      "tag": "#document"
+    }
+  },
+  {
+    "id": 2,
+    "role": "html",
+    "name": "",
+    "attributes": {
+      "tag": "html"
+    }
+  },
+  {
+    "id": 3,
+    "role": "html",
+    "name": "",
+    "attributes": {
+      "tag": "html"
+    }
+  },
+  {
+    "id": 4,
+    "role": "head",
+    "name": "",
+    "attributes": {
+      "tag": "head"
+    }
+  },
+  {
+    "id": 5,
+    "role": "meta",
+    "name": "",
+    "attributes": {
+      "tag": "meta"
+    }
+  },
+  {
+    "id": 6,
+    "role": "title",
+    "name": "",
+    "attributes": {
+      "tag": "title"
+    }
+  },
+  {
+    "id": 7,
+    "role": "text",
+    "name": "React • TodoMVC",
+    "attributes": {
+      "tag": "#text"
+    }
+  },
+  {
+    "id": 8,
+    "role": "link",
+    "name": "",
+    "attributes": {
+      "tag": "link"
+    }
+  },
+  {
+    "id": 9,
+    "role": "link",
+    "name": "",
+    "attributes": {
+      "tag": "link"
+    }
+  },
+  {
+    "id": 10,
+    "role": "body",
+    "name": "",
+    "attributes": {
+      "tag": "body"
+    }
+  },
+  {
+    "id": 11,
+    "role": "div",
+    "name": "",
+    "attributes": {
+      "tag": "div"
+    }
+  },
+  {
+    "id": 12,
+    "role": "text",
+    "name": "This is just a demo of TodoMVC for testing, not the ",
+    "attributes": {
+      "tag": "#text"
+    }
+  },
+  {
+    "id": 13,
+    "role": "link",
+    "name": "",
+    "attributes": {
+      "tag": "a"
+    }
+  },
+  {
+    "id": 14,
+    "role": "text",
+    "name": "real TodoMVC app.",
+    "attributes": {
+      "tag": "#text"
+    }
+  },
+  {
+    "id": 15,
+    "role": "section",
+    "name": "todoapp",
+    "attributes": {
+      "tag": "section"
+    }
+  },
+  {
+    "id": 16,
+    "role": "div",
+    "name": "",
+    "attributes": {
+      "tag": "div"
+    }
+  },
+  {
+    "id": 17,
+    "role": "header",
+    "name": "header",
+    "attributes": {
+      "tag": "header"
+    }
+  },
+  {
+    "id": 18,
+    "role": "h1",
+    "name": "",
+    "attributes": {
+      "tag": "h1"
+    }
+  },
+  {
+    "id": 19,
+    "role": "text",
+    "name": "todos",
+    "attributes": {
+      "tag": "#text"
+    }
+  },
+  {
+    "id": 20,
+    "role": "textbox",
+    "name": "What needs to be done?",
+    "attributes": {
+      "tag": "input"
+    }
+  },
+  {
+    "id": 25,
+    "role": "footer",
+    "name": "info",
+    "attributes": {
+      "tag": "footer"
+    }
+  },
+  {
+    "id": 26,
+    "role": "p",
+    "name": "",
+    "attributes": {
+      "tag": "p"
+    }
+  },
+  {
+    "id": 27,
+    "role": "text",
+    "name": "Double-click to edit a todo",
+    "attributes": {
+      "tag": "#text"
+    }
+  },
+  {
+    "id": 28,
+    "role": "p",
+    "name": "",
+    "attributes": {
+      "tag": "p"
+    }
+  },
+  {
+    "id": 29,
+    "role": "text",
+    "name": "Created by ",
+    "attributes": {
+      "tag": "#text"
+    }
+  },
+  {
+    "id": 30,
+    "role": "link",
+    "name": "",
+    "attributes": {
+      "tag": "a"
+    }
+  },
+  {
+    "id": 31,
+    "role": "text",
+    "name": "Remo H. Jansen",
+    "attributes": {
+      "tag": "#text"
+    }
+  },
+  {
+    "id": 32,
+    "role": "p",
+    "name": "",
+    "attributes": {
+      "tag": "p"
+    }
+  },
+  {
+    "id": 33,
+    "role": "text",
+    "name": "Part of ",
+    "attributes": {
+      "tag": "#text"
+    }
+  },
+  {
+    "id": 34,
+    "role": "link",
+    "name": "",
+    "attributes": {
+      "tag": "a"
+    }
+  },
+  {
+    "id": 35,
+    "role": "text",
+    "name": "TodoMVC",
+    "attributes": {
+      "tag": "#text"
+    }
+  },
+  {
+    "id": 36,
+    "role": "script",
+    "name": "",
+    "attributes": {
+      "tag": "script"
+    }
+  },
+  {
+    "id": 37,
+    "role": "script",
+    "name": "",
+    "attributes": {
+      "tag": "script"
+    }
+  }
+]

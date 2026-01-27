@@ -1,0 +1,7377 @@
+HACKERNEWS FULL NODE DUMP
+================================================================================
+
+ID: 1
+Role: #document
+Name: 
+Attributes:
+  tag: #document
+
+ID: 2
+Role: html
+Name: 
+Attributes:
+  tag: html
+
+ID: 3
+Role: head
+Name: 
+Attributes:
+  tag: head
+
+ID: 4
+Role: meta
+Name: referrer
+Attributes:
+  tag: meta
+
+ID: 5
+Role: meta
+Name: viewport
+Attributes:
+  tag: meta
+
+ID: 6
+Role: link
+Name: 
+Attributes:
+  tag: link
+
+ID: 7
+Role: link
+Name: 
+Attributes:
+  tag: link
+
+ID: 8
+Role: link
+Name: 
+Attributes:
+  tag: link
+
+ID: 9
+Role: title
+Name: 
+Attributes:
+  tag: title
+
+ID: 10
+Role: text
+Name: Hacker News
+Attributes:
+  tag: #text
+
+ID: 11
+Role: body
+Name: 
+Attributes:
+  tag: body
+
+ID: 12
+Role: center
+Name: 
+Attributes:
+  tag: center
+
+ID: 13
+Role: table
+Name: hnmain
+Attributes:
+  tag: table
+
+ID: 14
+Role: tbody
+Name: 
+Attributes:
+  tag: tbody
+
+ID: 15
+Role: tr
+Name: 
+Attributes:
+  tag: tr
+
+ID: 16
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 17
+Role: table
+Name: 
+Attributes:
+  tag: table
+
+ID: 18
+Role: tbody
+Name: 
+Attributes:
+  tag: tbody
+
+ID: 19
+Role: tr
+Name: 
+Attributes:
+  tag: tr
+
+ID: 20
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 21
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 22
+Role: img
+Name: 
+Attributes:
+  tag: img
+
+ID: 23
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 24
+Role: span
+Name: pagetop
+Attributes:
+  tag: span
+
+ID: 25
+Role: b
+Name: hnname
+Attributes:
+  tag: b
+
+ID: 26
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 27
+Role: text
+Name: Hacker News
+Attributes:
+  tag: #text
+
+ID: 28
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 29
+Role: text
+Name: new
+Attributes:
+  tag: #text
+
+ID: 30
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 31
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 32
+Role: text
+Name: past
+Attributes:
+  tag: #text
+
+ID: 33
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 34
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 35
+Role: text
+Name: comments
+Attributes:
+  tag: #text
+
+ID: 36
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 37
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 38
+Role: text
+Name: ask
+Attributes:
+  tag: #text
+
+ID: 39
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 40
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 41
+Role: text
+Name: show
+Attributes:
+  tag: #text
+
+ID: 42
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 43
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 44
+Role: text
+Name: jobs
+Attributes:
+  tag: #text
+
+ID: 45
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 46
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 47
+Role: text
+Name: submit
+Attributes:
+  tag: #text
+
+ID: 48
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 49
+Role: span
+Name: pagetop
+Attributes:
+  tag: span
+
+ID: 50
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 51
+Role: text
+Name: login
+Attributes:
+  tag: #text
+
+ID: 52
+Role: tr
+Name: 
+Attributes:
+  tag: tr
+
+ID: 53
+Role: tr
+Name: bigbox
+Attributes:
+  tag: tr
+
+ID: 54
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 55
+Role: table
+Name: 
+Attributes:
+  tag: table
+
+ID: 56
+Role: tbody
+Name: 
+Attributes:
+  tag: tbody
+
+ID: 57
+Role: tr
+Name: 46757944
+Attributes:
+  tag: tr
+
+ID: 58
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 59
+Role: span
+Name: rank
+Attributes:
+  tag: span
+
+ID: 60
+Role: text
+Name: 1.
+Attributes:
+  tag: #text
+
+ID: 61
+Role: td
+Name: votelinks
+Attributes:
+  tag: td
+
+ID: 62
+Role: center
+Name: 
+Attributes:
+  tag: center
+
+ID: 63
+Role: link
+Name: up_46757944
+Attributes:
+  tag: a
+
+ID: 64
+Role: div
+Name: votearrow
+Attributes:
+  tag: div
+
+ID: 65
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 66
+Role: span
+Name: titleline
+Attributes:
+  tag: span
+
+ID: 67
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 68
+Role: text
+Name: OnePlus update blocks downgrades and custom ROMs by blowing a fuse
+Attributes:
+  tag: #text
+
+ID: 69
+Role: span
+Name: sitebit comhead
+Attributes:
+  tag: span
+
+ID: 70
+Role: text
+Name:  (
+Attributes:
+  tag: #text
+
+ID: 71
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 72
+Role: span
+Name: sitestr
+Attributes:
+  tag: span
+
+ID: 73
+Role: text
+Name: consumerrights.wiki
+Attributes:
+  tag: #text
+
+ID: 74
+Role: text
+Name: )
+Attributes:
+  tag: #text
+
+ID: 75
+Role: tr
+Name: 
+Attributes:
+  tag: tr
+
+ID: 76
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 77
+Role: td
+Name: subtext
+Attributes:
+  tag: td
+
+ID: 78
+Role: span
+Name: subline
+Attributes:
+  tag: span
+
+ID: 79
+Role: span
+Name: score_46757944
+Attributes:
+  tag: span
+
+ID: 80
+Role: text
+Name: 219 points
+Attributes:
+  tag: #text
+
+ID: 81
+Role: text
+Name:  by 
+Attributes:
+  tag: #text
+
+ID: 82
+Role: link
+Name: hnuser
+Attributes:
+  tag: a
+
+ID: 83
+Role: text
+Name: validatori
+Attributes:
+  tag: #text
+
+ID: 84
+Role: span
+Name: age
+Attributes:
+  tag: span
+
+ID: 85
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 86
+Role: text
+Name: 1 hour ago
+Attributes:
+  tag: #text
+
+ID: 87
+Role: span
+Name: unv_46757944
+Attributes:
+  tag: span
+
+ID: 88
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 89
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 90
+Role: text
+Name: hide
+Attributes:
+  tag: #text
+
+ID: 91
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 92
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 93
+Role: text
+Name: 81 comments
+Attributes:
+  tag: #text
+
+ID: 94
+Role: tr
+Name: spacer
+Attributes:
+  tag: tr
+
+ID: 95
+Role: tr
+Name: 46757067
+Attributes:
+  tag: tr
+
+ID: 96
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 97
+Role: span
+Name: rank
+Attributes:
+  tag: span
+
+ID: 98
+Role: text
+Name: 2.
+Attributes:
+  tag: #text
+
+ID: 99
+Role: td
+Name: votelinks
+Attributes:
+  tag: td
+
+ID: 100
+Role: center
+Name: 
+Attributes:
+  tag: center
+
+ID: 101
+Role: link
+Name: up_46757067
+Attributes:
+  tag: a
+
+ID: 102
+Role: div
+Name: votearrow
+Attributes:
+  tag: div
+
+ID: 103
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 104
+Role: span
+Name: titleline
+Attributes:
+  tag: span
+
+ID: 105
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 106
+Role: text
+Name: First, make me care
+Attributes:
+  tag: #text
+
+ID: 107
+Role: span
+Name: sitebit comhead
+Attributes:
+  tag: span
+
+ID: 108
+Role: text
+Name:  (
+Attributes:
+  tag: #text
+
+ID: 109
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 110
+Role: span
+Name: sitestr
+Attributes:
+  tag: span
+
+ID: 111
+Role: text
+Name: gwern.net
+Attributes:
+  tag: #text
+
+ID: 112
+Role: text
+Name: )
+Attributes:
+  tag: #text
+
+ID: 113
+Role: tr
+Name: 
+Attributes:
+  tag: tr
+
+ID: 114
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 115
+Role: td
+Name: subtext
+Attributes:
+  tag: td
+
+ID: 116
+Role: span
+Name: subline
+Attributes:
+  tag: span
+
+ID: 117
+Role: span
+Name: score_46757067
+Attributes:
+  tag: span
+
+ID: 118
+Role: text
+Name: 168 points
+Attributes:
+  tag: #text
+
+ID: 119
+Role: text
+Name:  by 
+Attributes:
+  tag: #text
+
+ID: 120
+Role: link
+Name: hnuser
+Attributes:
+  tag: a
+
+ID: 121
+Role: text
+Name: andsoitis
+Attributes:
+  tag: #text
+
+ID: 122
+Role: span
+Name: age
+Attributes:
+  tag: span
+
+ID: 123
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 124
+Role: text
+Name: 2 hours ago
+Attributes:
+  tag: #text
+
+ID: 125
+Role: span
+Name: unv_46757067
+Attributes:
+  tag: span
+
+ID: 126
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 127
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 128
+Role: text
+Name: hide
+Attributes:
+  tag: #text
+
+ID: 129
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 130
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 131
+Role: text
+Name: 67 comments
+Attributes:
+  tag: #text
+
+ID: 132
+Role: tr
+Name: spacer
+Attributes:
+  tag: tr
+
+ID: 133
+Role: tr
+Name: 46758450
+Attributes:
+  tag: tr
+
+ID: 134
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 135
+Role: span
+Name: rank
+Attributes:
+  tag: span
+
+ID: 136
+Role: text
+Name: 3.
+Attributes:
+  tag: #text
+
+ID: 137
+Role: td
+Name: votelinks
+Attributes:
+  tag: td
+
+ID: 138
+Role: center
+Name: 
+Attributes:
+  tag: center
+
+ID: 139
+Role: link
+Name: up_46758450
+Attributes:
+  tag: a
+
+ID: 140
+Role: div
+Name: votearrow
+Attributes:
+  tag: div
+
+ID: 141
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 142
+Role: span
+Name: titleline
+Attributes:
+  tag: span
+
+ID: 143
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 144
+Role: text
+Name: The '3.5% rule': How a small minority can change the world
+Attributes:
+  tag: #text
+
+ID: 145
+Role: span
+Name: sitebit comhead
+Attributes:
+  tag: span
+
+ID: 146
+Role: text
+Name:  (
+Attributes:
+  tag: #text
+
+ID: 147
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 148
+Role: span
+Name: sitestr
+Attributes:
+  tag: span
+
+ID: 149
+Role: text
+Name: bbc.com
+Attributes:
+  tag: #text
+
+ID: 150
+Role: text
+Name: )
+Attributes:
+  tag: #text
+
+ID: 151
+Role: tr
+Name: 
+Attributes:
+  tag: tr
+
+ID: 152
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 153
+Role: td
+Name: subtext
+Attributes:
+  tag: td
+
+ID: 154
+Role: span
+Name: subline
+Attributes:
+  tag: span
+
+ID: 155
+Role: span
+Name: score_46758450
+Attributes:
+  tag: span
+
+ID: 156
+Role: text
+Name: 35 points
+Attributes:
+  tag: #text
+
+ID: 157
+Role: text
+Name:  by 
+Attributes:
+  tag: #text
+
+ID: 158
+Role: link
+Name: hnuser
+Attributes:
+  tag: a
+
+ID: 159
+Role: text
+Name: choult
+Attributes:
+  tag: #text
+
+ID: 160
+Role: span
+Name: age
+Attributes:
+  tag: span
+
+ID: 161
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 162
+Role: text
+Name: 1 hour ago
+Attributes:
+  tag: #text
+
+ID: 163
+Role: span
+Name: unv_46758450
+Attributes:
+  tag: span
+
+ID: 164
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 165
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 166
+Role: text
+Name: hide
+Attributes:
+  tag: #text
+
+ID: 167
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 168
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 169
+Role: text
+Name: 15 comments
+Attributes:
+  tag: #text
+
+ID: 170
+Role: tr
+Name: spacer
+Attributes:
+  tag: tr
+
+ID: 171
+Role: tr
+Name: 46754944
+Attributes:
+  tag: tr
+
+ID: 172
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 173
+Role: span
+Name: rank
+Attributes:
+  tag: span
+
+ID: 174
+Role: text
+Name: 4.
+Attributes:
+  tag: #text
+
+ID: 175
+Role: td
+Name: votelinks
+Attributes:
+  tag: td
+
+ID: 176
+Role: center
+Name: 
+Attributes:
+  tag: center
+
+ID: 177
+Role: link
+Name: up_46754944
+Attributes:
+  tag: a
+
+ID: 178
+Role: div
+Name: votearrow
+Attributes:
+  tag: div
+
+ID: 179
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 180
+Role: span
+Name: titleline
+Attributes:
+  tag: span
+
+ID: 181
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 182
+Role: text
+Name: A macOS app that blurs your screen when you slouch
+Attributes:
+  tag: #text
+
+ID: 183
+Role: span
+Name: sitebit comhead
+Attributes:
+  tag: span
+
+ID: 184
+Role: text
+Name:  (
+Attributes:
+  tag: #text
+
+ID: 185
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 186
+Role: span
+Name: sitestr
+Attributes:
+  tag: span
+
+ID: 187
+Role: text
+Name: github.com/tldev
+Attributes:
+  tag: #text
+
+ID: 188
+Role: text
+Name: )
+Attributes:
+  tag: #text
+
+ID: 189
+Role: tr
+Name: 
+Attributes:
+  tag: tr
+
+ID: 190
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 191
+Role: td
+Name: subtext
+Attributes:
+  tag: td
+
+ID: 192
+Role: span
+Name: subline
+Attributes:
+  tag: span
+
+ID: 193
+Role: span
+Name: score_46754944
+Attributes:
+  tag: span
+
+ID: 194
+Role: text
+Name: 398 points
+Attributes:
+  tag: #text
+
+ID: 195
+Role: text
+Name:  by 
+Attributes:
+  tag: #text
+
+ID: 196
+Role: link
+Name: hnuser
+Attributes:
+  tag: a
+
+ID: 197
+Role: text
+Name: dnw
+Attributes:
+  tag: #text
+
+ID: 198
+Role: span
+Name: age
+Attributes:
+  tag: span
+
+ID: 199
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 200
+Role: text
+Name: 6 hours ago
+Attributes:
+  tag: #text
+
+ID: 201
+Role: span
+Name: unv_46754944
+Attributes:
+  tag: span
+
+ID: 202
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 203
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 204
+Role: text
+Name: hide
+Attributes:
+  tag: #text
+
+ID: 205
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 206
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 207
+Role: text
+Name: 144 comments
+Attributes:
+  tag: #text
+
+ID: 208
+Role: tr
+Name: spacer
+Attributes:
+  tag: tr
+
+ID: 209
+Role: tr
+Name: 46757357
+Attributes:
+  tag: tr
+
+ID: 210
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 211
+Role: span
+Name: rank
+Attributes:
+  tag: span
+
+ID: 212
+Role: text
+Name: 5.
+Attributes:
+  tag: #text
+
+ID: 213
+Role: td
+Name: votelinks
+Attributes:
+  tag: td
+
+ID: 214
+Role: center
+Name: 
+Attributes:
+  tag: center
+
+ID: 215
+Role: link
+Name: up_46757357
+Attributes:
+  tag: a
+
+ID: 216
+Role: div
+Name: votearrow
+Attributes:
+  tag: div
+
+ID: 217
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 218
+Role: span
+Name: titleline
+Attributes:
+  tag: span
+
+ID: 219
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 220
+Role: text
+Name: I was right about ATProto key management
+Attributes:
+  tag: #text
+
+ID: 221
+Role: span
+Name: sitebit comhead
+Attributes:
+  tag: span
+
+ID: 222
+Role: text
+Name:  (
+Attributes:
+  tag: #text
+
+ID: 223
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 224
+Role: span
+Name: sitestr
+Attributes:
+  tag: span
+
+ID: 225
+Role: text
+Name: nora.codes
+Attributes:
+  tag: #text
+
+ID: 226
+Role: text
+Name: )
+Attributes:
+  tag: #text
+
+ID: 227
+Role: tr
+Name: 
+Attributes:
+  tag: tr
+
+ID: 228
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 229
+Role: td
+Name: subtext
+Attributes:
+  tag: td
+
+ID: 230
+Role: span
+Name: subline
+Attributes:
+  tag: span
+
+ID: 231
+Role: span
+Name: score_46757357
+Attributes:
+  tag: span
+
+ID: 232
+Role: text
+Name: 57 points
+Attributes:
+  tag: #text
+
+ID: 233
+Role: text
+Name:  by 
+Attributes:
+  tag: #text
+
+ID: 234
+Role: link
+Name: hnuser
+Attributes:
+  tag: a
+
+ID: 235
+Role: text
+Name: todsacerdoti
+Attributes:
+  tag: #text
+
+ID: 236
+Role: span
+Name: age
+Attributes:
+  tag: span
+
+ID: 237
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 238
+Role: text
+Name: 2 hours ago
+Attributes:
+  tag: #text
+
+ID: 239
+Role: span
+Name: unv_46757357
+Attributes:
+  tag: span
+
+ID: 240
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 241
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 242
+Role: text
+Name: hide
+Attributes:
+  tag: #text
+
+ID: 243
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 244
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 245
+Role: text
+Name: 7 comments
+Attributes:
+  tag: #text
+
+ID: 246
+Role: tr
+Name: spacer
+Attributes:
+  tag: tr
+
+ID: 247
+Role: tr
+Name: 46755115
+Attributes:
+  tag: tr
+
+ID: 248
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 249
+Role: span
+Name: rank
+Attributes:
+  tag: span
+
+ID: 250
+Role: text
+Name: 6.
+Attributes:
+  tag: #text
+
+ID: 251
+Role: td
+Name: votelinks
+Attributes:
+  tag: td
+
+ID: 252
+Role: center
+Name: 
+Attributes:
+  tag: center
+
+ID: 253
+Role: link
+Name: up_46755115
+Attributes:
+  tag: a
+
+ID: 254
+Role: div
+Name: votearrow
+Attributes:
+  tag: div
+
+ID: 255
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 256
+Role: span
+Name: titleline
+Attributes:
+  tag: span
+
+ID: 257
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 258
+Role: text
+Name: Using PostgreSQL as a Dead Letter Queue for Event-Driven Systems
+Attributes:
+  tag: #text
+
+ID: 259
+Role: span
+Name: sitebit comhead
+Attributes:
+  tag: span
+
+ID: 260
+Role: text
+Name:  (
+Attributes:
+  tag: #text
+
+ID: 261
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 262
+Role: span
+Name: sitestr
+Attributes:
+  tag: span
+
+ID: 263
+Role: text
+Name: diljitpr.net
+Attributes:
+  tag: #text
+
+ID: 264
+Role: text
+Name: )
+Attributes:
+  tag: #text
+
+ID: 265
+Role: tr
+Name: 
+Attributes:
+  tag: tr
+
+ID: 266
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 267
+Role: td
+Name: subtext
+Attributes:
+  tag: td
+
+ID: 268
+Role: span
+Name: subline
+Attributes:
+  tag: span
+
+ID: 269
+Role: span
+Name: score_46755115
+Attributes:
+  tag: span
+
+ID: 270
+Role: text
+Name: 136 points
+Attributes:
+  tag: #text
+
+ID: 271
+Role: text
+Name:  by 
+Attributes:
+  tag: #text
+
+ID: 272
+Role: link
+Name: hnuser
+Attributes:
+  tag: a
+
+ID: 273
+Role: text
+Name: tanelpoder
+Attributes:
+  tag: #text
+
+ID: 274
+Role: span
+Name: age
+Attributes:
+  tag: span
+
+ID: 275
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 276
+Role: text
+Name: 6 hours ago
+Attributes:
+  tag: #text
+
+ID: 277
+Role: span
+Name: unv_46755115
+Attributes:
+  tag: span
+
+ID: 278
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 279
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 280
+Role: text
+Name: hide
+Attributes:
+  tag: #text
+
+ID: 281
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 282
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 283
+Role: text
+Name: 40 comments
+Attributes:
+  tag: #text
+
+ID: 284
+Role: tr
+Name: spacer
+Attributes:
+  tag: tr
+
+ID: 285
+Role: tr
+Name: 46757224
+Attributes:
+  tag: tr
+
+ID: 286
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 287
+Role: span
+Name: rank
+Attributes:
+  tag: span
+
+ID: 288
+Role: text
+Name: 7.
+Attributes:
+  tag: #text
+
+ID: 289
+Role: td
+Name: votelinks
+Attributes:
+  tag: td
+
+ID: 290
+Role: center
+Name: 
+Attributes:
+  tag: center
+
+ID: 291
+Role: link
+Name: up_46757224
+Attributes:
+  tag: a
+
+ID: 292
+Role: div
+Name: votearrow
+Attributes:
+  tag: div
+
+ID: 293
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 294
+Role: span
+Name: titleline
+Attributes:
+  tag: span
+
+ID: 295
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 296
+Role: text
+Name: The behavioral cost of personalized pricing
+Attributes:
+  tag: #text
+
+ID: 297
+Role: span
+Name: sitebit comhead
+Attributes:
+  tag: span
+
+ID: 298
+Role: text
+Name:  (
+Attributes:
+  tag: #text
+
+ID: 299
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 300
+Role: span
+Name: sitestr
+Attributes:
+  tag: span
+
+ID: 301
+Role: text
+Name: digitalseams.com
+Attributes:
+  tag: #text
+
+ID: 302
+Role: text
+Name: )
+Attributes:
+  tag: #text
+
+ID: 303
+Role: tr
+Name: 
+Attributes:
+  tag: tr
+
+ID: 304
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 305
+Role: td
+Name: subtext
+Attributes:
+  tag: td
+
+ID: 306
+Role: span
+Name: subline
+Attributes:
+  tag: span
+
+ID: 307
+Role: span
+Name: score_46757224
+Attributes:
+  tag: span
+
+ID: 308
+Role: text
+Name: 9 points
+Attributes:
+  tag: #text
+
+ID: 309
+Role: text
+Name:  by 
+Attributes:
+  tag: #text
+
+ID: 310
+Role: link
+Name: hnuser
+Attributes:
+  tag: a
+
+ID: 311
+Role: text
+Name: bobbiechen
+Attributes:
+  tag: #text
+
+ID: 312
+Role: span
+Name: age
+Attributes:
+  tag: span
+
+ID: 313
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 314
+Role: text
+Name: 1 hour ago
+Attributes:
+  tag: #text
+
+ID: 315
+Role: span
+Name: unv_46757224
+Attributes:
+  tag: span
+
+ID: 316
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 317
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 318
+Role: text
+Name: hide
+Attributes:
+  tag: #text
+
+ID: 319
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 320
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 321
+Role: text
+Name: 4 comments
+Attributes:
+  tag: #text
+
+ID: 322
+Role: tr
+Name: spacer
+Attributes:
+  tag: tr
+
+ID: 323
+Role: tr
+Name: 46753484
+Attributes:
+  tag: tr
+
+ID: 324
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 325
+Role: span
+Name: rank
+Attributes:
+  tag: span
+
+ID: 326
+Role: text
+Name: 8.
+Attributes:
+  tag: #text
+
+ID: 327
+Role: td
+Name: votelinks
+Attributes:
+  tag: td
+
+ID: 328
+Role: center
+Name: 
+Attributes:
+  tag: center
+
+ID: 329
+Role: link
+Name: up_46753484
+Attributes:
+  tag: a
+
+ID: 330
+Role: div
+Name: votearrow
+Attributes:
+  tag: div
+
+ID: 331
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 332
+Role: span
+Name: titleline
+Attributes:
+  tag: span
+
+ID: 333
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 334
+Role: text
+Name: Doom has been ported to an earbud
+Attributes:
+  tag: #text
+
+ID: 335
+Role: span
+Name: sitebit comhead
+Attributes:
+  tag: span
+
+ID: 336
+Role: text
+Name:  (
+Attributes:
+  tag: #text
+
+ID: 337
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 338
+Role: span
+Name: sitestr
+Attributes:
+  tag: span
+
+ID: 339
+Role: text
+Name: doombuds.com
+Attributes:
+  tag: #text
+
+ID: 340
+Role: text
+Name: )
+Attributes:
+  tag: #text
+
+ID: 341
+Role: tr
+Name: 
+Attributes:
+  tag: tr
+
+ID: 342
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 343
+Role: td
+Name: subtext
+Attributes:
+  tag: td
+
+ID: 344
+Role: span
+Name: subline
+Attributes:
+  tag: span
+
+ID: 345
+Role: span
+Name: score_46753484
+Attributes:
+  tag: span
+
+ID: 346
+Role: text
+Name: 292 points
+Attributes:
+  tag: #text
+
+ID: 347
+Role: text
+Name:  by 
+Attributes:
+  tag: #text
+
+ID: 348
+Role: link
+Name: hnuser
+Attributes:
+  tag: a
+
+ID: 349
+Role: text
+Name: arin-s
+Attributes:
+  tag: #text
+
+ID: 350
+Role: span
+Name: age
+Attributes:
+  tag: span
+
+ID: 351
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 352
+Role: text
+Name: 10 hours ago
+Attributes:
+  tag: #text
+
+ID: 353
+Role: span
+Name: unv_46753484
+Attributes:
+  tag: span
+
+ID: 354
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 355
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 356
+Role: text
+Name: hide
+Attributes:
+  tag: #text
+
+ID: 357
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 358
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 359
+Role: text
+Name: 92 comments
+Attributes:
+  tag: #text
+
+ID: 360
+Role: tr
+Name: spacer
+Attributes:
+  tag: tr
+
+ID: 361
+Role: tr
+Name: 46757162
+Attributes:
+  tag: tr
+
+ID: 362
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 363
+Role: span
+Name: rank
+Attributes:
+  tag: span
+
+ID: 364
+Role: text
+Name: 9.
+Attributes:
+  tag: #text
+
+ID: 365
+Role: td
+Name: votelinks
+Attributes:
+  tag: td
+
+ID: 366
+Role: center
+Name: 
+Attributes:
+  tag: center
+
+ID: 367
+Role: link
+Name: up_46757162
+Attributes:
+  tag: a
+
+ID: 368
+Role: div
+Name: votearrow
+Attributes:
+  tag: div
+
+ID: 369
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 370
+Role: span
+Name: titleline
+Attributes:
+  tag: span
+
+ID: 371
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 372
+Role: text
+Name: Spanish track was fractured before high-speed train disaster, report finds
+Attributes:
+  tag: #text
+
+ID: 373
+Role: span
+Name: sitebit comhead
+Attributes:
+  tag: span
+
+ID: 374
+Role: text
+Name:  (
+Attributes:
+  tag: #text
+
+ID: 375
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 376
+Role: span
+Name: sitestr
+Attributes:
+  tag: span
+
+ID: 377
+Role: text
+Name: bbc.com
+Attributes:
+  tag: #text
+
+ID: 378
+Role: text
+Name: )
+Attributes:
+  tag: #text
+
+ID: 379
+Role: tr
+Name: 
+Attributes:
+  tag: tr
+
+ID: 380
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 381
+Role: td
+Name: subtext
+Attributes:
+  tag: td
+
+ID: 382
+Role: span
+Name: subline
+Attributes:
+  tag: span
+
+ID: 383
+Role: span
+Name: score_46757162
+Attributes:
+  tag: span
+
+ID: 384
+Role: text
+Name: 85 points
+Attributes:
+  tag: #text
+
+ID: 385
+Role: text
+Name:  by 
+Attributes:
+  tag: #text
+
+ID: 386
+Role: link
+Name: hnuser
+Attributes:
+  tag: a
+
+ID: 387
+Role: text
+Name: Rygian
+Attributes:
+  tag: #text
+
+ID: 388
+Role: span
+Name: age
+Attributes:
+  tag: span
+
+ID: 389
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 390
+Role: text
+Name: 3 hours ago
+Attributes:
+  tag: #text
+
+ID: 391
+Role: span
+Name: unv_46757162
+Attributes:
+  tag: span
+
+ID: 392
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 393
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 394
+Role: text
+Name: hide
+Attributes:
+  tag: #text
+
+ID: 395
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 396
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 397
+Role: text
+Name: 79 comments
+Attributes:
+  tag: #text
+
+ID: 398
+Role: tr
+Name: spacer
+Attributes:
+  tag: tr
+
+ID: 399
+Role: tr
+Name: 46752151
+Attributes:
+  tag: tr
+
+ID: 400
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 401
+Role: span
+Name: rank
+Attributes:
+  tag: span
+
+ID: 402
+Role: text
+Name: 10.
+Attributes:
+  tag: #text
+
+ID: 403
+Role: td
+Name: votelinks
+Attributes:
+  tag: td
+
+ID: 404
+Role: center
+Name: 
+Attributes:
+  tag: center
+
+ID: 405
+Role: link
+Name: up_46752151
+Attributes:
+  tag: a
+
+ID: 406
+Role: div
+Name: votearrow
+Attributes:
+  tag: div
+
+ID: 407
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 408
+Role: span
+Name: titleline
+Attributes:
+  tag: span
+
+ID: 409
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 410
+Role: text
+Name: A flawed paper in management science has been cited more than 6k times
+Attributes:
+  tag: #text
+
+ID: 411
+Role: span
+Name: sitebit comhead
+Attributes:
+  tag: span
+
+ID: 412
+Role: text
+Name:  (
+Attributes:
+  tag: #text
+
+ID: 413
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 414
+Role: span
+Name: sitestr
+Attributes:
+  tag: span
+
+ID: 415
+Role: text
+Name: columbia.edu
+Attributes:
+  tag: #text
+
+ID: 416
+Role: text
+Name: )
+Attributes:
+  tag: #text
+
+ID: 417
+Role: tr
+Name: 
+Attributes:
+  tag: tr
+
+ID: 418
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 419
+Role: td
+Name: subtext
+Attributes:
+  tag: td
+
+ID: 420
+Role: span
+Name: subline
+Attributes:
+  tag: span
+
+ID: 421
+Role: span
+Name: score_46752151
+Attributes:
+  tag: span
+
+ID: 422
+Role: text
+Name: 584 points
+Attributes:
+  tag: #text
+
+ID: 423
+Role: text
+Name:  by 
+Attributes:
+  tag: #text
+
+ID: 424
+Role: link
+Name: hnuser
+Attributes:
+  tag: a
+
+ID: 425
+Role: text
+Name: timr
+Attributes:
+  tag: #text
+
+ID: 426
+Role: span
+Name: age
+Attributes:
+  tag: span
+
+ID: 427
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 428
+Role: text
+Name: 13 hours ago
+Attributes:
+  tag: #text
+
+ID: 429
+Role: span
+Name: unv_46752151
+Attributes:
+  tag: span
+
+ID: 430
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 431
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 432
+Role: text
+Name: hide
+Attributes:
+  tag: #text
+
+ID: 433
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 434
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 435
+Role: text
+Name: 309 comments
+Attributes:
+  tag: #text
+
+ID: 436
+Role: tr
+Name: spacer
+Attributes:
+  tag: tr
+
+ID: 437
+Role: tr
+Name: 46753708
+Attributes:
+  tag: tr
+
+ID: 438
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 439
+Role: span
+Name: rank
+Attributes:
+  tag: span
+
+ID: 440
+Role: text
+Name: 11.
+Attributes:
+  tag: #text
+
+ID: 441
+Role: td
+Name: votelinks
+Attributes:
+  tag: td
+
+ID: 442
+Role: center
+Name: 
+Attributes:
+  tag: center
+
+ID: 443
+Role: link
+Name: up_46753708
+Attributes:
+  tag: a
+
+ID: 444
+Role: div
+Name: votearrow
+Attributes:
+  tag: div
+
+ID: 445
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 446
+Role: span
+Name: titleline
+Attributes:
+  tag: span
+
+ID: 447
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 448
+Role: text
+Name: Web-based image editor modeled after Deluxe Paint
+Attributes:
+  tag: #text
+
+ID: 449
+Role: span
+Name: sitebit comhead
+Attributes:
+  tag: span
+
+ID: 450
+Role: text
+Name:  (
+Attributes:
+  tag: #text
+
+ID: 451
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 452
+Role: span
+Name: sitestr
+Attributes:
+  tag: span
+
+ID: 453
+Role: text
+Name: github.com/steffest
+Attributes:
+  tag: #text
+
+ID: 454
+Role: text
+Name: )
+Attributes:
+  tag: #text
+
+ID: 455
+Role: tr
+Name: 
+Attributes:
+  tag: tr
+
+ID: 456
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 457
+Role: td
+Name: subtext
+Attributes:
+  tag: td
+
+ID: 458
+Role: span
+Name: subline
+Attributes:
+  tag: span
+
+ID: 459
+Role: span
+Name: score_46753708
+Attributes:
+  tag: span
+
+ID: 460
+Role: text
+Name: 152 points
+Attributes:
+  tag: #text
+
+ID: 461
+Role: text
+Name:  by 
+Attributes:
+  tag: #text
+
+ID: 462
+Role: link
+Name: hnuser
+Attributes:
+  tag: a
+
+ID: 463
+Role: text
+Name: bananaboy
+Attributes:
+  tag: #text
+
+ID: 464
+Role: span
+Name: age
+Attributes:
+  tag: span
+
+ID: 465
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 466
+Role: text
+Name: 9 hours ago
+Attributes:
+  tag: #text
+
+ID: 467
+Role: span
+Name: unv_46753708
+Attributes:
+  tag: span
+
+ID: 468
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 469
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 470
+Role: text
+Name: hide
+Attributes:
+  tag: #text
+
+ID: 471
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 472
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 473
+Role: text
+Name: 10 comments
+Attributes:
+  tag: #text
+
+ID: 474
+Role: tr
+Name: spacer
+Attributes:
+  tag: tr
+
+ID: 475
+Role: tr
+Name: 46756117
+Attributes:
+  tag: tr
+
+ID: 476
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 477
+Role: span
+Name: rank
+Attributes:
+  tag: span
+
+ID: 478
+Role: text
+Name: 12.
+Attributes:
+  tag: #text
+
+ID: 479
+Role: td
+Name: votelinks
+Attributes:
+  tag: td
+
+ID: 480
+Role: center
+Name: 
+Attributes:
+  tag: center
+
+ID: 481
+Role: link
+Name: up_46756117
+Attributes:
+  tag: a
+
+ID: 482
+Role: div
+Name: votearrow
+Attributes:
+  tag: div
+
+ID: 483
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 484
+Role: span
+Name: titleline
+Attributes:
+  tag: span
+
+ID: 485
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 486
+Role: text
+Name: ICE using Palantir tool that feeds on Medicaid data
+Attributes:
+  tag: #text
+
+ID: 487
+Role: span
+Name: sitebit comhead
+Attributes:
+  tag: span
+
+ID: 488
+Role: text
+Name:  (
+Attributes:
+  tag: #text
+
+ID: 489
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 490
+Role: span
+Name: sitestr
+Attributes:
+  tag: span
+
+ID: 491
+Role: text
+Name: eff.org
+Attributes:
+  tag: #text
+
+ID: 492
+Role: text
+Name: )
+Attributes:
+  tag: #text
+
+ID: 493
+Role: tr
+Name: 
+Attributes:
+  tag: tr
+
+ID: 494
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 495
+Role: td
+Name: subtext
+Attributes:
+  tag: td
+
+ID: 496
+Role: span
+Name: subline
+Attributes:
+  tag: span
+
+ID: 497
+Role: span
+Name: score_46756117
+Attributes:
+  tag: span
+
+ID: 498
+Role: text
+Name: 660 points
+Attributes:
+  tag: #text
+
+ID: 499
+Role: text
+Name:  by 
+Attributes:
+  tag: #text
+
+ID: 500
+Role: link
+Name: hnuser
+Attributes:
+  tag: a
+
+ID: 501
+Role: text
+Name: JKCalhoun
+Attributes:
+  tag: #text
+
+ID: 502
+Role: span
+Name: age
+Attributes:
+  tag: span
+
+ID: 503
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 504
+Role: text
+Name: 4 hours ago
+Attributes:
+  tag: #text
+
+ID: 505
+Role: span
+Name: unv_46756117
+Attributes:
+  tag: span
+
+ID: 506
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 507
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 508
+Role: text
+Name: hide
+Attributes:
+  tag: #text
+
+ID: 509
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 510
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 511
+Role: text
+Name: 388 comments
+Attributes:
+  tag: #text
+
+ID: 512
+Role: tr
+Name: spacer
+Attributes:
+  tag: tr
+
+ID: 513
+Role: tr
+Name: 46754522
+Attributes:
+  tag: tr
+
+ID: 514
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 515
+Role: span
+Name: rank
+Attributes:
+  tag: span
+
+ID: 516
+Role: text
+Name: 13.
+Attributes:
+  tag: #text
+
+ID: 517
+Role: td
+Name: votelinks
+Attributes:
+  tag: td
+
+ID: 518
+Role: center
+Name: 
+Attributes:
+  tag: center
+
+ID: 519
+Role: link
+Name: up_46754522
+Attributes:
+  tag: a
+
+ID: 520
+Role: div
+Name: votearrow
+Attributes:
+  tag: div
+
+ID: 521
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 522
+Role: span
+Name: titleline
+Attributes:
+  tag: span
+
+ID: 523
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 524
+Role: text
+Name: Bitwise conversion of doubles using only FP multiplication and addition (2020)
+Attributes:
+  tag: #text
+
+ID: 525
+Role: span
+Name: sitebit comhead
+Attributes:
+  tag: span
+
+ID: 526
+Role: text
+Name:  (
+Attributes:
+  tag: #text
+
+ID: 527
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 528
+Role: span
+Name: sitestr
+Attributes:
+  tag: span
+
+ID: 529
+Role: text
+Name: dougallj.wordpress.com
+Attributes:
+  tag: #text
+
+ID: 530
+Role: text
+Name: )
+Attributes:
+  tag: #text
+
+ID: 531
+Role: tr
+Name: 
+Attributes:
+  tag: tr
+
+ID: 532
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 533
+Role: td
+Name: subtext
+Attributes:
+  tag: td
+
+ID: 534
+Role: span
+Name: subline
+Attributes:
+  tag: span
+
+ID: 535
+Role: span
+Name: score_46754522
+Attributes:
+  tag: span
+
+ID: 536
+Role: text
+Name: 6 points
+Attributes:
+  tag: #text
+
+ID: 537
+Role: text
+Name:  by 
+Attributes:
+  tag: #text
+
+ID: 538
+Role: link
+Name: hnuser
+Attributes:
+  tag: a
+
+ID: 539
+Role: text
+Name: vitaut
+Attributes:
+  tag: #text
+
+ID: 540
+Role: span
+Name: age
+Attributes:
+  tag: span
+
+ID: 541
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 542
+Role: text
+Name: 1 hour ago
+Attributes:
+  tag: #text
+
+ID: 543
+Role: span
+Name: unv_46754522
+Attributes:
+  tag: span
+
+ID: 544
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 545
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 546
+Role: text
+Name: hide
+Attributes:
+  tag: #text
+
+ID: 547
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 548
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 549
+Role: text
+Name: discuss
+Attributes:
+  tag: #text
+
+ID: 550
+Role: tr
+Name: spacer
+Attributes:
+  tag: tr
+
+ID: 551
+Role: tr
+Name: 46691130
+Attributes:
+  tag: tr
+
+ID: 552
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 553
+Role: span
+Name: rank
+Attributes:
+  tag: span
+
+ID: 554
+Role: text
+Name: 14.
+Attributes:
+  tag: #text
+
+ID: 555
+Role: td
+Name: votelinks
+Attributes:
+  tag: td
+
+ID: 556
+Role: center
+Name: 
+Attributes:
+  tag: center
+
+ID: 557
+Role: link
+Name: up_46691130
+Attributes:
+  tag: a
+
+ID: 558
+Role: div
+Name: votearrow
+Attributes:
+  tag: div
+
+ID: 559
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 560
+Role: span
+Name: titleline
+Attributes:
+  tag: span
+
+ID: 561
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 562
+Role: text
+Name: Hackable personal news reader in bash pipes
+Attributes:
+  tag: #text
+
+ID: 563
+Role: span
+Name: sitebit comhead
+Attributes:
+  tag: span
+
+ID: 564
+Role: text
+Name:  (
+Attributes:
+  tag: #text
+
+ID: 565
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 566
+Role: span
+Name: sitestr
+Attributes:
+  tag: span
+
+ID: 567
+Role: text
+Name: github.com/haron
+Attributes:
+  tag: #text
+
+ID: 568
+Role: text
+Name: )
+Attributes:
+  tag: #text
+
+ID: 569
+Role: tr
+Name: 
+Attributes:
+  tag: tr
+
+ID: 570
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 571
+Role: td
+Name: subtext
+Attributes:
+  tag: td
+
+ID: 572
+Role: span
+Name: subline
+Attributes:
+  tag: span
+
+ID: 573
+Role: span
+Name: score_46691130
+Attributes:
+  tag: span
+
+ID: 574
+Role: text
+Name: 9 points
+Attributes:
+  tag: #text
+
+ID: 575
+Role: text
+Name:  by 
+Attributes:
+  tag: #text
+
+ID: 576
+Role: link
+Name: hnuser
+Attributes:
+  tag: a
+
+ID: 577
+Role: text
+Name: haron
+Attributes:
+  tag: #text
+
+ID: 578
+Role: span
+Name: age
+Attributes:
+  tag: span
+
+ID: 579
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 580
+Role: text
+Name: 2 hours ago
+Attributes:
+  tag: #text
+
+ID: 581
+Role: span
+Name: unv_46691130
+Attributes:
+  tag: span
+
+ID: 582
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 583
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 584
+Role: text
+Name: hide
+Attributes:
+  tag: #text
+
+ID: 585
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 586
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 587
+Role: text
+Name: 4 comments
+Attributes:
+  tag: #text
+
+ID: 588
+Role: tr
+Name: spacer
+Attributes:
+  tag: tr
+
+ID: 589
+Role: tr
+Name: 46751826
+Attributes:
+  tag: tr
+
+ID: 590
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 591
+Role: span
+Name: rank
+Attributes:
+  tag: span
+
+ID: 592
+Role: text
+Name: 15.
+Attributes:
+  tag: #text
+
+ID: 593
+Role: td
+Name: votelinks
+Attributes:
+  tag: td
+
+ID: 594
+Role: center
+Name: 
+Attributes:
+  tag: center
+
+ID: 595
+Role: link
+Name: up_46751826
+Attributes:
+  tag: a
+
+ID: 596
+Role: div
+Name: votearrow
+Attributes:
+  tag: div
+
+ID: 597
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 598
+Role: span
+Name: titleline
+Attributes:
+  tag: span
+
+ID: 599
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 600
+Role: text
+Name: Introduction to PostgreSQL Indexes
+Attributes:
+  tag: #text
+
+ID: 601
+Role: span
+Name: sitebit comhead
+Attributes:
+  tag: span
+
+ID: 602
+Role: text
+Name:  (
+Attributes:
+  tag: #text
+
+ID: 603
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 604
+Role: span
+Name: sitestr
+Attributes:
+  tag: span
+
+ID: 605
+Role: text
+Name: dlt.github.io
+Attributes:
+  tag: #text
+
+ID: 606
+Role: text
+Name: )
+Attributes:
+  tag: #text
+
+ID: 607
+Role: tr
+Name: 
+Attributes:
+  tag: tr
+
+ID: 608
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 609
+Role: td
+Name: subtext
+Attributes:
+  tag: td
+
+ID: 610
+Role: span
+Name: subline
+Attributes:
+  tag: span
+
+ID: 611
+Role: span
+Name: score_46751826
+Attributes:
+  tag: span
+
+ID: 612
+Role: text
+Name: 264 points
+Attributes:
+  tag: #text
+
+ID: 613
+Role: text
+Name:  by 
+Attributes:
+  tag: #text
+
+ID: 614
+Role: link
+Name: hnuser
+Attributes:
+  tag: a
+
+ID: 615
+Role: text
+Name: dlt
+Attributes:
+  tag: #text
+
+ID: 616
+Role: span
+Name: age
+Attributes:
+  tag: span
+
+ID: 617
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 618
+Role: text
+Name: 14 hours ago
+Attributes:
+  tag: #text
+
+ID: 619
+Role: span
+Name: unv_46751826
+Attributes:
+  tag: span
+
+ID: 620
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 621
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 622
+Role: text
+Name: hide
+Attributes:
+  tag: #text
+
+ID: 623
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 624
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 625
+Role: text
+Name: 14 comments
+Attributes:
+  tag: #text
+
+ID: 626
+Role: tr
+Name: spacer
+Attributes:
+  tag: tr
+
+ID: 627
+Role: tr
+Name: 46753301
+Attributes:
+  tag: tr
+
+ID: 628
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 629
+Role: span
+Name: rank
+Attributes:
+  tag: span
+
+ID: 630
+Role: text
+Name: 16.
+Attributes:
+  tag: #text
+
+ID: 631
+Role: td
+Name: votelinks
+Attributes:
+  tag: td
+
+ID: 632
+Role: center
+Name: 
+Attributes:
+  tag: center
+
+ID: 633
+Role: link
+Name: up_46753301
+Attributes:
+  tag: a
+
+ID: 634
+Role: div
+Name: votearrow
+Attributes:
+  tag: div
+
+ID: 635
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 636
+Role: span
+Name: titleline
+Attributes:
+  tag: span
+
+ID: 637
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 638
+Role: text
+Name: Show HN: Bonsplit – Tabs and splits for native macOS apps
+Attributes:
+  tag: #text
+
+ID: 639
+Role: span
+Name: sitebit comhead
+Attributes:
+  tag: span
+
+ID: 640
+Role: text
+Name:  (
+Attributes:
+  tag: #text
+
+ID: 641
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 642
+Role: span
+Name: sitestr
+Attributes:
+  tag: span
+
+ID: 643
+Role: text
+Name: alasdairmonk.com
+Attributes:
+  tag: #text
+
+ID: 644
+Role: text
+Name: )
+Attributes:
+  tag: #text
+
+ID: 645
+Role: tr
+Name: 
+Attributes:
+  tag: tr
+
+ID: 646
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 647
+Role: td
+Name: subtext
+Attributes:
+  tag: td
+
+ID: 648
+Role: span
+Name: subline
+Attributes:
+  tag: span
+
+ID: 649
+Role: span
+Name: score_46753301
+Attributes:
+  tag: span
+
+ID: 650
+Role: text
+Name: 177 points
+Attributes:
+  tag: #text
+
+ID: 651
+Role: text
+Name:  by 
+Attributes:
+  tag: #text
+
+ID: 652
+Role: link
+Name: hnuser
+Attributes:
+  tag: a
+
+ID: 653
+Role: text
+Name: sgottit
+Attributes:
+  tag: #text
+
+ID: 654
+Role: span
+Name: age
+Attributes:
+  tag: span
+
+ID: 655
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 656
+Role: text
+Name: 10 hours ago
+Attributes:
+  tag: #text
+
+ID: 657
+Role: span
+Name: unv_46753301
+Attributes:
+  tag: span
+
+ID: 658
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 659
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 660
+Role: text
+Name: hide
+Attributes:
+  tag: #text
+
+ID: 661
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 662
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 663
+Role: text
+Name: 24 comments
+Attributes:
+  tag: #text
+
+ID: 664
+Role: tr
+Name: spacer
+Attributes:
+  tag: tr
+
+ID: 665
+Role: tr
+Name: 46689895
+Attributes:
+  tag: tr
+
+ID: 666
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 667
+Role: span
+Name: rank
+Attributes:
+  tag: span
+
+ID: 668
+Role: text
+Name: 17.
+Attributes:
+  tag: #text
+
+ID: 669
+Role: td
+Name: votelinks
+Attributes:
+  tag: td
+
+ID: 670
+Role: center
+Name: 
+Attributes:
+  tag: center
+
+ID: 671
+Role: link
+Name: up_46689895
+Attributes:
+  tag: a
+
+ID: 672
+Role: div
+Name: votearrow
+Attributes:
+  tag: div
+
+ID: 673
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 674
+Role: span
+Name: titleline
+Attributes:
+  tag: span
+
+ID: 675
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 676
+Role: text
+Name: Optimizing GPU Programs from Java Using Babylon and Hat
+Attributes:
+  tag: #text
+
+ID: 677
+Role: span
+Name: sitebit comhead
+Attributes:
+  tag: span
+
+ID: 678
+Role: text
+Name:  (
+Attributes:
+  tag: #text
+
+ID: 679
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 680
+Role: span
+Name: sitestr
+Attributes:
+  tag: span
+
+ID: 681
+Role: text
+Name: openjdk.org
+Attributes:
+  tag: #text
+
+ID: 682
+Role: text
+Name: )
+Attributes:
+  tag: #text
+
+ID: 683
+Role: tr
+Name: 
+Attributes:
+  tag: tr
+
+ID: 684
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 685
+Role: td
+Name: subtext
+Attributes:
+  tag: td
+
+ID: 686
+Role: span
+Name: subline
+Attributes:
+  tag: span
+
+ID: 687
+Role: span
+Name: score_46689895
+Attributes:
+  tag: span
+
+ID: 688
+Role: text
+Name: 14 points
+Attributes:
+  tag: #text
+
+ID: 689
+Role: text
+Name:  by 
+Attributes:
+  tag: #text
+
+ID: 690
+Role: link
+Name: hnuser
+Attributes:
+  tag: a
+
+ID: 691
+Role: text
+Name: pjmlp
+Attributes:
+  tag: #text
+
+ID: 692
+Role: span
+Name: age
+Attributes:
+  tag: span
+
+ID: 693
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 694
+Role: text
+Name: 3 hours ago
+Attributes:
+  tag: #text
+
+ID: 695
+Role: span
+Name: unv_46689895
+Attributes:
+  tag: span
+
+ID: 696
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 697
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 698
+Role: text
+Name: hide
+Attributes:
+  tag: #text
+
+ID: 699
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 700
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 701
+Role: text
+Name: discuss
+Attributes:
+  tag: #text
+
+ID: 702
+Role: tr
+Name: spacer
+Attributes:
+  tag: tr
+
+ID: 703
+Role: tr
+Name: 46754724
+Attributes:
+  tag: tr
+
+ID: 704
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 705
+Role: span
+Name: rank
+Attributes:
+  tag: span
+
+ID: 706
+Role: text
+Name: 18.
+Attributes:
+  tag: #text
+
+ID: 707
+Role: td
+Name: votelinks
+Attributes:
+  tag: td
+
+ID: 708
+Role: center
+Name: 
+Attributes:
+  tag: center
+
+ID: 709
+Role: link
+Name: up_46754724
+Attributes:
+  tag: a
+
+ID: 710
+Role: div
+Name: votearrow
+Attributes:
+  tag: div
+
+ID: 711
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 712
+Role: span
+Name: titleline
+Attributes:
+  tag: span
+
+ID: 713
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 714
+Role: text
+Name: Show HN: Netfence – Like Envoy for eBPF Filters
+Attributes:
+  tag: #text
+
+ID: 715
+Role: span
+Name: sitebit comhead
+Attributes:
+  tag: span
+
+ID: 716
+Role: text
+Name:  (
+Attributes:
+  tag: #text
+
+ID: 717
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 718
+Role: span
+Name: sitestr
+Attributes:
+  tag: span
+
+ID: 719
+Role: text
+Name: github.com/danthegoodman1
+Attributes:
+  tag: #text
+
+ID: 720
+Role: text
+Name: )
+Attributes:
+  tag: #text
+
+ID: 721
+Role: tr
+Name: 
+Attributes:
+  tag: tr
+
+ID: 722
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 723
+Role: td
+Name: subtext
+Attributes:
+  tag: td
+
+ID: 724
+Role: span
+Name: subline
+Attributes:
+  tag: span
+
+ID: 725
+Role: span
+Name: score_46754724
+Attributes:
+  tag: span
+
+ID: 726
+Role: text
+Name: 36 points
+Attributes:
+  tag: #text
+
+ID: 727
+Role: text
+Name:  by 
+Attributes:
+  tag: #text
+
+ID: 728
+Role: link
+Name: hnuser
+Attributes:
+  tag: a
+
+ID: 729
+Role: text
+Name: dangoodmanUT
+Attributes:
+  tag: #text
+
+ID: 730
+Role: span
+Name: age
+Attributes:
+  tag: span
+
+ID: 731
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 732
+Role: text
+Name: 7 hours ago
+Attributes:
+  tag: #text
+
+ID: 733
+Role: span
+Name: unv_46754724
+Attributes:
+  tag: span
+
+ID: 734
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 735
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 736
+Role: text
+Name: hide
+Attributes:
+  tag: #text
+
+ID: 737
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 738
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 739
+Role: text
+Name: 6 comments
+Attributes:
+  tag: #text
+
+ID: 740
+Role: tr
+Name: spacer
+Attributes:
+  tag: tr
+
+ID: 741
+Role: tr
+Name: 46758644
+Attributes:
+  tag: tr
+
+ID: 742
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 743
+Role: span
+Name: rank
+Attributes:
+  tag: span
+
+ID: 744
+Role: text
+Name: 19.
+Attributes:
+  tag: #text
+
+ID: 745
+Role: td
+Name: votelinks
+Attributes:
+  tag: td
+
+ID: 746
+Role: center
+Name: 
+Attributes:
+  tag: center
+
+ID: 747
+Role: link
+Name: up_46758644
+Attributes:
+  tag: a
+
+ID: 748
+Role: div
+Name: votearrow
+Attributes:
+  tag: div
+
+ID: 749
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 750
+Role: span
+Name: titleline
+Attributes:
+  tag: span
+
+ID: 751
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 752
+Role: text
+Name: LED lighting undermines visual performance unless supplemented by wider spectra
+Attributes:
+  tag: #text
+
+ID: 753
+Role: span
+Name: sitebit comhead
+Attributes:
+  tag: span
+
+ID: 754
+Role: text
+Name:  (
+Attributes:
+  tag: #text
+
+ID: 755
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 756
+Role: span
+Name: sitestr
+Attributes:
+  tag: span
+
+ID: 757
+Role: text
+Name: nature.com
+Attributes:
+  tag: #text
+
+ID: 758
+Role: text
+Name: )
+Attributes:
+  tag: #text
+
+ID: 759
+Role: tr
+Name: 
+Attributes:
+  tag: tr
+
+ID: 760
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 761
+Role: td
+Name: subtext
+Attributes:
+  tag: td
+
+ID: 762
+Role: span
+Name: subline
+Attributes:
+  tag: span
+
+ID: 763
+Role: span
+Name: score_46758644
+Attributes:
+  tag: span
+
+ID: 764
+Role: text
+Name: 24 points
+Attributes:
+  tag: #text
+
+ID: 765
+Role: text
+Name:  by 
+Attributes:
+  tag: #text
+
+ID: 766
+Role: link
+Name: hnuser
+Attributes:
+  tag: a
+
+ID: 767
+Role: text
+Name: bookofjoe
+Attributes:
+  tag: #text
+
+ID: 768
+Role: span
+Name: age
+Attributes:
+  tag: span
+
+ID: 769
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 770
+Role: text
+Name: 43 minutes ago
+Attributes:
+  tag: #text
+
+ID: 771
+Role: span
+Name: unv_46758644
+Attributes:
+  tag: span
+
+ID: 772
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 773
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 774
+Role: text
+Name: hide
+Attributes:
+  tag: #text
+
+ID: 775
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 776
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 777
+Role: text
+Name: 1 comment
+Attributes:
+  tag: #text
+
+ID: 778
+Role: tr
+Name: spacer
+Attributes:
+  tag: tr
+
+ID: 779
+Role: tr
+Name: 46757465
+Attributes:
+  tag: tr
+
+ID: 780
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 781
+Role: span
+Name: rank
+Attributes:
+  tag: span
+
+ID: 782
+Role: text
+Name: 20.
+Attributes:
+  tag: #text
+
+ID: 783
+Role: td
+Name: votelinks
+Attributes:
+  tag: td
+
+ID: 784
+Role: center
+Name: 
+Attributes:
+  tag: center
+
+ID: 785
+Role: link
+Name: up_46757465
+Attributes:
+  tag: a
+
+ID: 786
+Role: div
+Name: votearrow
+Attributes:
+  tag: div
+
+ID: 787
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 788
+Role: span
+Name: titleline
+Attributes:
+  tag: span
+
+ID: 789
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 790
+Role: text
+Name: Data Leak Exposes 149M Logins, Including Gmail, Facebook
+Attributes:
+  tag: #text
+
+ID: 791
+Role: span
+Name: sitebit comhead
+Attributes:
+  tag: span
+
+ID: 792
+Role: text
+Name:  (
+Attributes:
+  tag: #text
+
+ID: 793
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 794
+Role: span
+Name: sitestr
+Attributes:
+  tag: span
+
+ID: 795
+Role: text
+Name: techrepublic.com
+Attributes:
+  tag: #text
+
+ID: 796
+Role: text
+Name: )
+Attributes:
+  tag: #text
+
+ID: 797
+Role: tr
+Name: 
+Attributes:
+  tag: tr
+
+ID: 798
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 799
+Role: td
+Name: subtext
+Attributes:
+  tag: td
+
+ID: 800
+Role: span
+Name: subline
+Attributes:
+  tag: span
+
+ID: 801
+Role: span
+Name: score_46757465
+Attributes:
+  tag: span
+
+ID: 802
+Role: text
+Name: 54 points
+Attributes:
+  tag: #text
+
+ID: 803
+Role: text
+Name:  by 
+Attributes:
+  tag: #text
+
+ID: 804
+Role: link
+Name: hnuser
+Attributes:
+  tag: a
+
+ID: 805
+Role: text
+Name: saikatsg
+Attributes:
+  tag: #text
+
+ID: 806
+Role: span
+Name: age
+Attributes:
+  tag: span
+
+ID: 807
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 808
+Role: text
+Name: 2 hours ago
+Attributes:
+  tag: #text
+
+ID: 809
+Role: span
+Name: unv_46757465
+Attributes:
+  tag: span
+
+ID: 810
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 811
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 812
+Role: text
+Name: hide
+Attributes:
+  tag: #text
+
+ID: 813
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 814
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 815
+Role: text
+Name: 7 comments
+Attributes:
+  tag: #text
+
+ID: 816
+Role: tr
+Name: spacer
+Attributes:
+  tag: tr
+
+ID: 817
+Role: tr
+Name: 46691152
+Attributes:
+  tag: tr
+
+ID: 818
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 819
+Role: span
+Name: rank
+Attributes:
+  tag: span
+
+ID: 820
+Role: text
+Name: 21.
+Attributes:
+  tag: #text
+
+ID: 821
+Role: td
+Name: votelinks
+Attributes:
+  tag: td
+
+ID: 822
+Role: center
+Name: 
+Attributes:
+  tag: center
+
+ID: 823
+Role: link
+Name: up_46691152
+Attributes:
+  tag: a
+
+ID: 824
+Role: div
+Name: votearrow
+Attributes:
+  tag: div
+
+ID: 825
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 826
+Role: span
+Name: titleline
+Attributes:
+  tag: span
+
+ID: 827
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 828
+Role: text
+Name: Publishing on the ATmosphere
+Attributes:
+  tag: #text
+
+ID: 829
+Role: span
+Name: sitebit comhead
+Attributes:
+  tag: span
+
+ID: 830
+Role: text
+Name:  (
+Attributes:
+  tag: #text
+
+ID: 831
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 832
+Role: span
+Name: sitestr
+Attributes:
+  tag: span
+
+ID: 833
+Role: text
+Name: offprint.app
+Attributes:
+  tag: #text
+
+ID: 834
+Role: text
+Name: )
+Attributes:
+  tag: #text
+
+ID: 835
+Role: tr
+Name: 
+Attributes:
+  tag: tr
+
+ID: 836
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 837
+Role: td
+Name: subtext
+Attributes:
+  tag: td
+
+ID: 838
+Role: span
+Name: subline
+Attributes:
+  tag: span
+
+ID: 839
+Role: span
+Name: score_46691152
+Attributes:
+  tag: span
+
+ID: 840
+Role: text
+Name: 29 points
+Attributes:
+  tag: #text
+
+ID: 841
+Role: text
+Name:  by 
+Attributes:
+  tag: #text
+
+ID: 842
+Role: link
+Name: hnuser
+Attributes:
+  tag: a
+
+ID: 843
+Role: text
+Name: danabramov
+Attributes:
+  tag: #text
+
+ID: 844
+Role: span
+Name: age
+Attributes:
+  tag: span
+
+ID: 845
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 846
+Role: text
+Name: 5 hours ago
+Attributes:
+  tag: #text
+
+ID: 847
+Role: span
+Name: unv_46691152
+Attributes:
+  tag: span
+
+ID: 848
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 849
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 850
+Role: text
+Name: hide
+Attributes:
+  tag: #text
+
+ID: 851
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 852
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 853
+Role: text
+Name: 17 comments
+Attributes:
+  tag: #text
+
+ID: 854
+Role: tr
+Name: spacer
+Attributes:
+  tag: tr
+
+ID: 855
+Role: tr
+Name: 46756427
+Attributes:
+  tag: tr
+
+ID: 856
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 857
+Role: span
+Name: rank
+Attributes:
+  tag: span
+
+ID: 858
+Role: text
+Name: 22.
+Attributes:
+  tag: #text
+
+ID: 859
+Role: td
+Name: votelinks
+Attributes:
+  tag: td
+
+ID: 860
+Role: center
+Name: 
+Attributes:
+  tag: center
+
+ID: 861
+Role: link
+Name: up_46756427
+Attributes:
+  tag: a
+
+ID: 862
+Role: div
+Name: votearrow
+Attributes:
+  tag: div
+
+ID: 863
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 864
+Role: span
+Name: titleline
+Attributes:
+  tag: span
+
+ID: 865
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 866
+Role: text
+Name: Show HN: An interactive map of US lighthouses and navigational aids
+Attributes:
+  tag: #text
+
+ID: 867
+Role: span
+Name: sitebit comhead
+Attributes:
+  tag: span
+
+ID: 868
+Role: text
+Name:  (
+Attributes:
+  tag: #text
+
+ID: 869
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 870
+Role: span
+Name: sitestr
+Attributes:
+  tag: span
+
+ID: 871
+Role: text
+Name: lighthouses.app
+Attributes:
+  tag: #text
+
+ID: 872
+Role: text
+Name: )
+Attributes:
+  tag: #text
+
+ID: 873
+Role: tr
+Name: 
+Attributes:
+  tag: tr
+
+ID: 874
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 875
+Role: td
+Name: subtext
+Attributes:
+  tag: td
+
+ID: 876
+Role: span
+Name: subline
+Attributes:
+  tag: span
+
+ID: 877
+Role: span
+Name: score_46756427
+Attributes:
+  tag: span
+
+ID: 878
+Role: text
+Name: 4 points
+Attributes:
+  tag: #text
+
+ID: 879
+Role: text
+Name:  by 
+Attributes:
+  tag: #text
+
+ID: 880
+Role: link
+Name: hnuser
+Attributes:
+  tag: a
+
+ID: 881
+Role: text
+Name: idd2
+Attributes:
+  tag: #text
+
+ID: 882
+Role: span
+Name: age
+Attributes:
+  tag: span
+
+ID: 883
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 884
+Role: text
+Name: 1 hour ago
+Attributes:
+  tag: #text
+
+ID: 885
+Role: span
+Name: unv_46756427
+Attributes:
+  tag: span
+
+ID: 886
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 887
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 888
+Role: text
+Name: hide
+Attributes:
+  tag: #text
+
+ID: 889
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 890
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 891
+Role: text
+Name: discuss
+Attributes:
+  tag: #text
+
+ID: 892
+Role: tr
+Name: spacer
+Attributes:
+  tag: tr
+
+ID: 893
+Role: tr
+Name: 46718923
+Attributes:
+  tag: tr
+
+ID: 894
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 895
+Role: span
+Name: rank
+Attributes:
+  tag: span
+
+ID: 896
+Role: text
+Name: 23.
+Attributes:
+  tag: #text
+
+ID: 897
+Role: td
+Name: votelinks
+Attributes:
+  tag: td
+
+ID: 898
+Role: center
+Name: 
+Attributes:
+  tag: center
+
+ID: 899
+Role: link
+Name: up_46718923
+Attributes:
+  tag: a
+
+ID: 900
+Role: div
+Name: votearrow
+Attributes:
+  tag: div
+
+ID: 901
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 902
+Role: span
+Name: titleline
+Attributes:
+  tag: span
+
+ID: 903
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 904
+Role: text
+Name: Infinite pancakes, anyone?
+Attributes:
+  tag: #text
+
+ID: 905
+Role: span
+Name: sitebit comhead
+Attributes:
+  tag: span
+
+ID: 906
+Role: text
+Name:  (
+Attributes:
+  tag: #text
+
+ID: 907
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 908
+Role: span
+Name: sitestr
+Attributes:
+  tag: span
+
+ID: 909
+Role: text
+Name: nytimes.com
+Attributes:
+  tag: #text
+
+ID: 910
+Role: text
+Name: )
+Attributes:
+  tag: #text
+
+ID: 911
+Role: tr
+Name: 
+Attributes:
+  tag: tr
+
+ID: 912
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 913
+Role: td
+Name: subtext
+Attributes:
+  tag: td
+
+ID: 914
+Role: span
+Name: subline
+Attributes:
+  tag: span
+
+ID: 915
+Role: span
+Name: score_46718923
+Attributes:
+  tag: span
+
+ID: 916
+Role: text
+Name: 4 points
+Attributes:
+  tag: #text
+
+ID: 917
+Role: text
+Name:  by 
+Attributes:
+  tag: #text
+
+ID: 918
+Role: link
+Name: hnuser
+Attributes:
+  tag: a
+
+ID: 919
+Role: text
+Name: cainxinth
+Attributes:
+  tag: #text
+
+ID: 920
+Role: span
+Name: age
+Attributes:
+  tag: span
+
+ID: 921
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 922
+Role: text
+Name: 1 hour ago
+Attributes:
+  tag: #text
+
+ID: 923
+Role: span
+Name: unv_46718923
+Attributes:
+  tag: span
+
+ID: 924
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 925
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 926
+Role: text
+Name: hide
+Attributes:
+  tag: #text
+
+ID: 927
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 928
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 929
+Role: text
+Name: 2 comments
+Attributes:
+  tag: #text
+
+ID: 930
+Role: tr
+Name: spacer
+Attributes:
+  tag: tr
+
+ID: 931
+Role: tr
+Name: 46695467
+Attributes:
+  tag: tr
+
+ID: 932
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 933
+Role: span
+Name: rank
+Attributes:
+  tag: span
+
+ID: 934
+Role: text
+Name: 24.
+Attributes:
+  tag: #text
+
+ID: 935
+Role: td
+Name: votelinks
+Attributes:
+  tag: td
+
+ID: 936
+Role: center
+Name: 
+Attributes:
+  tag: center
+
+ID: 937
+Role: link
+Name: up_46695467
+Attributes:
+  tag: a
+
+ID: 938
+Role: div
+Name: votearrow
+Attributes:
+  tag: div
+
+ID: 939
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 940
+Role: span
+Name: titleline
+Attributes:
+  tag: span
+
+ID: 941
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 942
+Role: text
+Name: Show HN: Fence – Sandbox CLI commands with network/filesystem restrictions
+Attributes:
+  tag: #text
+
+ID: 943
+Role: span
+Name: sitebit comhead
+Attributes:
+  tag: span
+
+ID: 944
+Role: text
+Name:  (
+Attributes:
+  tag: #text
+
+ID: 945
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 946
+Role: span
+Name: sitestr
+Attributes:
+  tag: span
+
+ID: 947
+Role: text
+Name: github.com/use-tusk
+Attributes:
+  tag: #text
+
+ID: 948
+Role: text
+Name: )
+Attributes:
+  tag: #text
+
+ID: 949
+Role: tr
+Name: 
+Attributes:
+  tag: tr
+
+ID: 950
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 951
+Role: td
+Name: subtext
+Attributes:
+  tag: td
+
+ID: 952
+Role: span
+Name: subline
+Attributes:
+  tag: span
+
+ID: 953
+Role: span
+Name: score_46695467
+Attributes:
+  tag: span
+
+ID: 954
+Role: text
+Name: 50 points
+Attributes:
+  tag: #text
+
+ID: 955
+Role: text
+Name:  by 
+Attributes:
+  tag: #text
+
+ID: 956
+Role: link
+Name: hnuser
+Attributes:
+  tag: a
+
+ID: 957
+Role: text
+Name: jy-tan
+Attributes:
+  tag: #text
+
+ID: 958
+Role: span
+Name: age
+Attributes:
+  tag: span
+
+ID: 959
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 960
+Role: text
+Name: 6 hours ago
+Attributes:
+  tag: #text
+
+ID: 961
+Role: span
+Name: unv_46695467
+Attributes:
+  tag: span
+
+ID: 962
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 963
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 964
+Role: text
+Name: hide
+Attributes:
+  tag: #text
+
+ID: 965
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 966
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 967
+Role: text
+Name: 12 comments
+Attributes:
+  tag: #text
+
+ID: 968
+Role: tr
+Name: spacer
+Attributes:
+  tag: tr
+
+ID: 969
+Role: tr
+Name: 46753336
+Attributes:
+  tag: tr
+
+ID: 970
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 971
+Role: span
+Name: rank
+Attributes:
+  tag: span
+
+ID: 972
+Role: text
+Name: 25.
+Attributes:
+  tag: #text
+
+ID: 973
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 974
+Role: img
+Name: 
+Attributes:
+  tag: img
+
+ID: 975
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 976
+Role: span
+Name: titleline
+Attributes:
+  tag: span
+
+ID: 977
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 978
+Role: text
+Name: Nango (YC W23, Dev Infrastructure) Is Hiring Remotely
+Attributes:
+  tag: #text
+
+ID: 979
+Role: span
+Name: sitebit comhead
+Attributes:
+  tag: span
+
+ID: 980
+Role: text
+Name:  (
+Attributes:
+  tag: #text
+
+ID: 981
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 982
+Role: span
+Name: sitestr
+Attributes:
+  tag: span
+
+ID: 983
+Role: text
+Name: ashbyhq.com
+Attributes:
+  tag: #text
+
+ID: 984
+Role: text
+Name: )
+Attributes:
+  tag: #text
+
+ID: 985
+Role: tr
+Name: 
+Attributes:
+  tag: tr
+
+ID: 986
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 987
+Role: td
+Name: subtext
+Attributes:
+  tag: td
+
+ID: 988
+Role: span
+Name: age
+Attributes:
+  tag: span
+
+ID: 989
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 990
+Role: text
+Name: 10 hours ago
+Attributes:
+  tag: #text
+
+ID: 991
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 992
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 993
+Role: text
+Name: hide
+Attributes:
+  tag: #text
+
+ID: 994
+Role: tr
+Name: spacer
+Attributes:
+  tag: tr
+
+ID: 995
+Role: tr
+Name: 46753078
+Attributes:
+  tag: tr
+
+ID: 996
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 997
+Role: span
+Name: rank
+Attributes:
+  tag: span
+
+ID: 998
+Role: text
+Name: 26.
+Attributes:
+  tag: #text
+
+ID: 999
+Role: td
+Name: votelinks
+Attributes:
+  tag: td
+
+ID: 1000
+Role: center
+Name: 
+Attributes:
+  tag: center
+
+ID: 1001
+Role: link
+Name: up_46753078
+Attributes:
+  tag: a
+
+ID: 1002
+Role: div
+Name: votearrow
+Attributes:
+  tag: div
+
+ID: 1003
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 1004
+Role: span
+Name: titleline
+Attributes:
+  tag: span
+
+ID: 1005
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 1006
+Role: text
+Name: Show HN: TUI for managing XDG default applications
+Attributes:
+  tag: #text
+
+ID: 1007
+Role: span
+Name: sitebit comhead
+Attributes:
+  tag: span
+
+ID: 1008
+Role: text
+Name:  (
+Attributes:
+  tag: #text
+
+ID: 1009
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 1010
+Role: span
+Name: sitestr
+Attributes:
+  tag: span
+
+ID: 1011
+Role: text
+Name: github.com/mitjafelicijan
+Attributes:
+  tag: #text
+
+ID: 1012
+Role: text
+Name: )
+Attributes:
+  tag: #text
+
+ID: 1013
+Role: tr
+Name: 
+Attributes:
+  tag: tr
+
+ID: 1014
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 1015
+Role: td
+Name: subtext
+Attributes:
+  tag: td
+
+ID: 1016
+Role: span
+Name: subline
+Attributes:
+  tag: span
+
+ID: 1017
+Role: span
+Name: score_46753078
+Attributes:
+  tag: span
+
+ID: 1018
+Role: text
+Name: 104 points
+Attributes:
+  tag: #text
+
+ID: 1019
+Role: text
+Name:  by 
+Attributes:
+  tag: #text
+
+ID: 1020
+Role: link
+Name: hnuser
+Attributes:
+  tag: a
+
+ID: 1021
+Role: text
+Name: mitjafelicijan
+Attributes:
+  tag: #text
+
+ID: 1022
+Role: span
+Name: age
+Attributes:
+  tag: span
+
+ID: 1023
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 1024
+Role: text
+Name: 11 hours ago
+Attributes:
+  tag: #text
+
+ID: 1025
+Role: span
+Name: unv_46753078
+Attributes:
+  tag: span
+
+ID: 1026
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 1027
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 1028
+Role: text
+Name: hide
+Attributes:
+  tag: #text
+
+ID: 1029
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 1030
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 1031
+Role: text
+Name: 36 comments
+Attributes:
+  tag: #text
+
+ID: 1032
+Role: tr
+Name: spacer
+Attributes:
+  tag: tr
+
+ID: 1033
+Role: tr
+Name: 46756530
+Attributes:
+  tag: tr
+
+ID: 1034
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 1035
+Role: span
+Name: rank
+Attributes:
+  tag: span
+
+ID: 1036
+Role: text
+Name: 27.
+Attributes:
+  tag: #text
+
+ID: 1037
+Role: td
+Name: votelinks
+Attributes:
+  tag: td
+
+ID: 1038
+Role: center
+Name: 
+Attributes:
+  tag: center
+
+ID: 1039
+Role: link
+Name: up_46756530
+Attributes:
+  tag: a
+
+ID: 1040
+Role: div
+Name: votearrow
+Attributes:
+  tag: div
+
+ID: 1041
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 1042
+Role: span
+Name: titleline
+Attributes:
+  tag: span
+
+ID: 1043
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 1044
+Role: text
+Name: On the Methodology of Actual Physics [video]
+Attributes:
+  tag: #text
+
+ID: 1045
+Role: span
+Name: sitebit comhead
+Attributes:
+  tag: span
+
+ID: 1046
+Role: text
+Name:  (
+Attributes:
+  tag: #text
+
+ID: 1047
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 1048
+Role: span
+Name: sitestr
+Attributes:
+  tag: span
+
+ID: 1049
+Role: text
+Name: youtube.com
+Attributes:
+  tag: #text
+
+ID: 1050
+Role: text
+Name: )
+Attributes:
+  tag: #text
+
+ID: 1051
+Role: tr
+Name: 
+Attributes:
+  tag: tr
+
+ID: 1052
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 1053
+Role: td
+Name: subtext
+Attributes:
+  tag: td
+
+ID: 1054
+Role: span
+Name: subline
+Attributes:
+  tag: span
+
+ID: 1055
+Role: span
+Name: score_46756530
+Attributes:
+  tag: span
+
+ID: 1056
+Role: text
+Name: 3 points
+Attributes:
+  tag: #text
+
+ID: 1057
+Role: text
+Name:  by 
+Attributes:
+  tag: #text
+
+ID: 1058
+Role: link
+Name: hnuser
+Attributes:
+  tag: a
+
+ID: 1059
+Role: text
+Name: sbuttgereit
+Attributes:
+  tag: #text
+
+ID: 1060
+Role: span
+Name: age
+Attributes:
+  tag: span
+
+ID: 1061
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 1062
+Role: text
+Name: 1 hour ago
+Attributes:
+  tag: #text
+
+ID: 1063
+Role: span
+Name: unv_46756530
+Attributes:
+  tag: span
+
+ID: 1064
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 1065
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 1066
+Role: text
+Name: hide
+Attributes:
+  tag: #text
+
+ID: 1067
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 1068
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 1069
+Role: text
+Name: discuss
+Attributes:
+  tag: #text
+
+ID: 1070
+Role: tr
+Name: spacer
+Attributes:
+  tag: tr
+
+ID: 1071
+Role: tr
+Name: 46710747
+Attributes:
+  tag: tr
+
+ID: 1072
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 1073
+Role: span
+Name: rank
+Attributes:
+  tag: span
+
+ID: 1074
+Role: text
+Name: 28.
+Attributes:
+  tag: #text
+
+ID: 1075
+Role: td
+Name: votelinks
+Attributes:
+  tag: td
+
+ID: 1076
+Role: center
+Name: 
+Attributes:
+  tag: center
+
+ID: 1077
+Role: link
+Name: up_46710747
+Attributes:
+  tag: a
+
+ID: 1078
+Role: div
+Name: votearrow
+Attributes:
+  tag: div
+
+ID: 1079
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 1080
+Role: span
+Name: titleline
+Attributes:
+  tag: span
+
+ID: 1081
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 1082
+Role: text
+Name: ANN v3: 200ms p99 query latency over 100B vectors
+Attributes:
+  tag: #text
+
+ID: 1083
+Role: span
+Name: sitebit comhead
+Attributes:
+  tag: span
+
+ID: 1084
+Role: text
+Name:  (
+Attributes:
+  tag: #text
+
+ID: 1085
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 1086
+Role: span
+Name: sitestr
+Attributes:
+  tag: span
+
+ID: 1087
+Role: text
+Name: turbopuffer.com
+Attributes:
+  tag: #text
+
+ID: 1088
+Role: text
+Name: )
+Attributes:
+  tag: #text
+
+ID: 1089
+Role: tr
+Name: 
+Attributes:
+  tag: tr
+
+ID: 1090
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 1091
+Role: td
+Name: subtext
+Attributes:
+  tag: td
+
+ID: 1092
+Role: span
+Name: subline
+Attributes:
+  tag: span
+
+ID: 1093
+Role: span
+Name: score_46710747
+Attributes:
+  tag: span
+
+ID: 1094
+Role: text
+Name: 89 points
+Attributes:
+  tag: #text
+
+ID: 1095
+Role: text
+Name:  by 
+Attributes:
+  tag: #text
+
+ID: 1096
+Role: link
+Name: hnuser
+Attributes:
+  tag: a
+
+ID: 1097
+Role: text
+Name: _peregrine_
+Attributes:
+  tag: #text
+
+ID: 1098
+Role: span
+Name: age
+Attributes:
+  tag: span
+
+ID: 1099
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 1100
+Role: text
+Name: 9 hours ago
+Attributes:
+  tag: #text
+
+ID: 1101
+Role: span
+Name: unv_46710747
+Attributes:
+  tag: span
+
+ID: 1102
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 1103
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 1104
+Role: text
+Name: hide
+Attributes:
+  tag: #text
+
+ID: 1105
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 1106
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 1107
+Role: text
+Name: 41 comments
+Attributes:
+  tag: #text
+
+ID: 1108
+Role: tr
+Name: spacer
+Attributes:
+  tag: tr
+
+ID: 1109
+Role: tr
+Name: 46751899
+Attributes:
+  tag: tr
+
+ID: 1110
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 1111
+Role: span
+Name: rank
+Attributes:
+  tag: span
+
+ID: 1112
+Role: text
+Name: 29.
+Attributes:
+  tag: #text
+
+ID: 1113
+Role: td
+Name: votelinks
+Attributes:
+  tag: td
+
+ID: 1114
+Role: center
+Name: 
+Attributes:
+  tag: center
+
+ID: 1115
+Role: link
+Name: up_46751899
+Attributes:
+  tag: a
+
+ID: 1116
+Role: div
+Name: votearrow
+Attributes:
+  tag: div
+
+ID: 1117
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 1118
+Role: span
+Name: titleline
+Attributes:
+  tag: span
+
+ID: 1119
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 1120
+Role: text
+Name: Deutsche Telekom is throttling the internet
+Attributes:
+  tag: #text
+
+ID: 1121
+Role: span
+Name: sitebit comhead
+Attributes:
+  tag: span
+
+ID: 1122
+Role: text
+Name:  (
+Attributes:
+  tag: #text
+
+ID: 1123
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 1124
+Role: span
+Name: sitestr
+Attributes:
+  tag: span
+
+ID: 1125
+Role: text
+Name: netzbremse.de
+Attributes:
+  tag: #text
+
+ID: 1126
+Role: text
+Name: )
+Attributes:
+  tag: #text
+
+ID: 1127
+Role: tr
+Name: 
+Attributes:
+  tag: tr
+
+ID: 1128
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 1129
+Role: td
+Name: subtext
+Attributes:
+  tag: td
+
+ID: 1130
+Role: span
+Name: subline
+Attributes:
+  tag: span
+
+ID: 1131
+Role: span
+Name: score_46751899
+Attributes:
+  tag: span
+
+ID: 1132
+Role: text
+Name: 547 points
+Attributes:
+  tag: #text
+
+ID: 1133
+Role: text
+Name:  by 
+Attributes:
+  tag: #text
+
+ID: 1134
+Role: link
+Name: hnuser
+Attributes:
+  tag: a
+
+ID: 1135
+Role: text
+Name: tietjens
+Attributes:
+  tag: #text
+
+ID: 1136
+Role: span
+Name: age
+Attributes:
+  tag: span
+
+ID: 1137
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 1138
+Role: text
+Name: 14 hours ago
+Attributes:
+  tag: #text
+
+ID: 1139
+Role: span
+Name: unv_46751899
+Attributes:
+  tag: span
+
+ID: 1140
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 1141
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 1142
+Role: text
+Name: hide
+Attributes:
+  tag: #text
+
+ID: 1143
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 1144
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 1145
+Role: text
+Name: 265 comments
+Attributes:
+  tag: #text
+
+ID: 1146
+Role: tr
+Name: spacer
+Attributes:
+  tag: tr
+
+ID: 1147
+Role: tr
+Name: 46752261
+Attributes:
+  tag: tr
+
+ID: 1148
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 1149
+Role: span
+Name: rank
+Attributes:
+  tag: span
+
+ID: 1150
+Role: text
+Name: 30.
+Attributes:
+  tag: #text
+
+ID: 1151
+Role: td
+Name: votelinks
+Attributes:
+  tag: td
+
+ID: 1152
+Role: center
+Name: 
+Attributes:
+  tag: center
+
+ID: 1153
+Role: link
+Name: up_46752261
+Attributes:
+  tag: a
+
+ID: 1154
+Role: div
+Name: votearrow
+Attributes:
+  tag: div
+
+ID: 1155
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 1156
+Role: span
+Name: titleline
+Attributes:
+  tag: span
+
+ID: 1157
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 1158
+Role: text
+Name: Jurassic Park - Tablet device on Nedry's desk? (2012)
+Attributes:
+  tag: #text
+
+ID: 1159
+Role: span
+Name: sitebit comhead
+Attributes:
+  tag: span
+
+ID: 1160
+Role: text
+Name:  (
+Attributes:
+  tag: #text
+
+ID: 1161
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 1162
+Role: span
+Name: sitestr
+Attributes:
+  tag: span
+
+ID: 1163
+Role: text
+Name: therpf.com
+Attributes:
+  tag: #text
+
+ID: 1164
+Role: text
+Name: )
+Attributes:
+  tag: #text
+
+ID: 1165
+Role: tr
+Name: 
+Attributes:
+  tag: tr
+
+ID: 1166
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 1167
+Role: td
+Name: subtext
+Attributes:
+  tag: td
+
+ID: 1168
+Role: span
+Name: subline
+Attributes:
+  tag: span
+
+ID: 1169
+Role: span
+Name: score_46752261
+Attributes:
+  tag: span
+
+ID: 1170
+Role: text
+Name: 135 points
+Attributes:
+  tag: #text
+
+ID: 1171
+Role: text
+Name:  by 
+Attributes:
+  tag: #text
+
+ID: 1172
+Role: link
+Name: hnuser
+Attributes:
+  tag: a
+
+ID: 1173
+Role: text
+Name: exvi
+Attributes:
+  tag: #text
+
+ID: 1174
+Role: span
+Name: age
+Attributes:
+  tag: span
+
+ID: 1175
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 1176
+Role: text
+Name: 13 hours ago
+Attributes:
+  tag: #text
+
+ID: 1177
+Role: span
+Name: unv_46752261
+Attributes:
+  tag: span
+
+ID: 1178
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 1179
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 1180
+Role: text
+Name: hide
+Attributes:
+  tag: #text
+
+ID: 1181
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 1182
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 1183
+Role: text
+Name: 57 comments
+Attributes:
+  tag: #text
+
+ID: 1184
+Role: tr
+Name: spacer
+Attributes:
+  tag: tr
+
+ID: 1185
+Role: tr
+Name: morespace
+Attributes:
+  tag: tr
+
+ID: 1186
+Role: tr
+Name: 
+Attributes:
+  tag: tr
+
+ID: 1187
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 1188
+Role: td
+Name: title
+Attributes:
+  tag: td
+
+ID: 1189
+Role: link
+Name: morelink
+Attributes:
+  tag: a
+
+ID: 1190
+Role: text
+Name: More
+Attributes:
+  tag: #text
+
+ID: 1191
+Role: tr
+Name: 
+Attributes:
+  tag: tr
+
+ID: 1192
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 1193
+Role: img
+Name: 
+Attributes:
+  tag: img
+
+ID: 1194
+Role: table
+Name: 
+Attributes:
+  tag: table
+
+ID: 1195
+Role: tbody
+Name: 
+Attributes:
+  tag: tbody
+
+ID: 1196
+Role: tr
+Name: 
+Attributes:
+  tag: tr
+
+ID: 1197
+Role: td
+Name: 
+Attributes:
+  tag: td
+
+ID: 1198
+Role: br
+Name: 
+Attributes:
+  tag: br
+
+ID: 1199
+Role: center
+Name: 
+Attributes:
+  tag: center
+
+ID: 1200
+Role: span
+Name: yclinks
+Attributes:
+  tag: span
+
+ID: 1201
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 1202
+Role: text
+Name: Guidelines
+Attributes:
+  tag: #text
+
+ID: 1203
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 1204
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 1205
+Role: text
+Name: FAQ
+Attributes:
+  tag: #text
+
+ID: 1206
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 1207
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 1208
+Role: text
+Name: Lists
+Attributes:
+  tag: #text
+
+ID: 1209
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 1210
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 1211
+Role: text
+Name: API
+Attributes:
+  tag: #text
+
+ID: 1212
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 1213
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 1214
+Role: text
+Name: Security
+Attributes:
+  tag: #text
+
+ID: 1215
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 1216
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 1217
+Role: text
+Name: Legal
+Attributes:
+  tag: #text
+
+ID: 1218
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 1219
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 1220
+Role: text
+Name: Apply to YC
+Attributes:
+  tag: #text
+
+ID: 1221
+Role: text
+Name:  | 
+Attributes:
+  tag: #text
+
+ID: 1222
+Role: link
+Name: 
+Attributes:
+  tag: a
+
+ID: 1223
+Role: text
+Name: Contact
+Attributes:
+  tag: #text
+
+ID: 1224
+Role: br
+Name: 
+Attributes:
+  tag: br
+
+ID: 1225
+Role: br
+Name: 
+Attributes:
+  tag: br
+
+ID: 1226
+Role: form
+Name: 
+Attributes:
+  tag: form
+
+ID: 1227
+Role: text
+Name: Search: 
+Attributes:
+  tag: #text
+
+ID: 1228
+Role: textbox
+Name: q
+Attributes:
+  tag: input
+
+ID: 1231
+Role: script
+Name: 
+Attributes:
+  tag: script
+

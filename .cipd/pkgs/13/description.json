@@ -1,0 +1,4 @@
+{
+  "subdir": "src/third_party/dawn/tools/golang/windows-arm64",
+  "package_name": "infra/3pp/tools/go/windows-arm64"
+}

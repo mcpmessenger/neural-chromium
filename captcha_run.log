@@ -1,0 +1,14 @@
+START CAPTCHA TEST
+Target: https://www.google.com/recaptcha/api2/demo
+Waiting 7s for reCAPTCHA to load...
+Observing Page...
+Found 4 IFRAMES
+Iframe: 57 a-vba2mdjra64g parent=56
+Iframe: 109  parent=72
+Iframe: 117  parent=54
+Iframe: 135 c-vba2mdjra64g parent=134
+Searching for name containing 'recaptcha-checkbox-border'...
+ -> Candidate: [87] div 'recaptcha-checkbox-border'
+FOUND CHECKBOX: ID=87 Role=div Name=recaptcha-checkbox-border
+Attempting CLICK...
+Click sent. Please check browser visually for green checkmark or puzzle.

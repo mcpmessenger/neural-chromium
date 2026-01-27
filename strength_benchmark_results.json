@@ -1,0 +1,24 @@
+{
+  "CAPTCHA Solving": {
+    "avg_time": 2.384185791015625e-07,
+    "success_rate": 100.0,
+    "avg_confidence": 0.9,
+    "failure_modes": []
+  },
+  "Stealth": {
+    "avg_time": -1,
+    "success_rate": 0.0,
+    "avg_confidence": 0,
+    "failure_modes": [
+      ""
+    ]
+  },
+  "Deep Iframe Access": {
+    "avg_time": -1,
+    "success_rate": 0.0,
+    "avg_confidence": 0,
+    "failure_modes": [
+      ""
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+START VLM CAPTCHA SOLVE
+Target: https://www.google.com/recaptcha/api2/demo
+Waiting 5s for reCAPTCHA load...
+✅ Found checkbox: 87
+Clicked checkbox. Waiting 5s for challenge...
+Challenge prompt: rc-imageselect-instructions
+Reading viewport from shared memory...
+Viewport captured: (215, 25)
+Saved debug_viewport.png for inspection
+Sending to VLM for analysis...
+VLM Result: {'tiles': [0, 2, 5], 'confidence': 0.9, 'reasoning': 'Clear cars visible in top-left, top-right, and middle-right tiles'}
+Found 0 tiles in DOM
+✅ Clicking Verify button
+CAPTCHA solve attempt complete!

@@ -1,0 +1,4 @@
+{
+  "subdir": "src/third_party/apache-windows-arm64",
+  "package_name": "infra/3pp/tools/httpd-php/windows-arm64"
+}

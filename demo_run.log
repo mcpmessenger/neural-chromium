@@ -1,0 +1,24 @@
+START
+
+🚀 STARTING HOLY SHIT DEMO 🚀
+Target: https://www.saucedemo.com/
+--------------------------------------------------
+
+[Phase 1] Login
+ -> Typing Credentials...
+ -> Clicking Login...
+
+[Phase 2] Shopping Spree
+✅ Logged in successfully (Found 'Products')
+ -> Looking for 'Sauce Labs Backpack'...
+ -> Found specific button: add-to-cart-sauce-labs-backpack
+ -> Looking for 'Sauce Labs Bike Light'...
+ -> Found specific button: add-to-cart-sauce-labs-bike-light
+
+[Phase 3] Checkout
+ -> Going to Cart...
+ -> Clicking Checkout...
+ -> Filling Shipping Info...
+ -> FINISHING ORDER!
+
+✅ DEMO COMPLETE: ORDER PLACED!

@@ -1,0 +1,14 @@
+{
+  "format_version": "1.1",
+  "package_name": "chromium/third_party/updater/chromium_win_arm64",
+  "install_mode": "copy",
+  "actual_install_mode": "copy",
+  "files": [
+    {
+      "name": "UpdaterSetup_test.exe",
+      "size": 7895040,
+      "executable": true,
+      "hash": "T0_4dba-kJyEq25OmrS5z1UROEtNMcVUudW8rZvEGl4C"
+    }
+  ]
+}

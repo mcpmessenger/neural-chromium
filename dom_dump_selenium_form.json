@@ -1,0 +1,762 @@
+[
+  {
+    "id": 1,
+    "role": "#document",
+    "name": "",
+    "attributes": {
+      "tag": "#document"
+    }
+  },
+  {
+    "id": 2,
+    "role": "html",
+    "name": "",
+    "attributes": {
+      "tag": "html"
+    }
+  },
+  {
+    "id": 3,
+    "role": "html",
+    "name": "h-100",
+    "attributes": {
+      "tag": "html"
+    }
+  },
+  {
+    "id": 4,
+    "role": "head",
+    "name": "",
+    "attributes": {
+      "tag": "head"
+    }
+  },
+  {
+    "id": 5,
+    "role": "title",
+    "name": "",
+    "attributes": {
+      "tag": "title"
+    }
+  },
+  {
+    "id": 6,
+    "role": "text",
+    "name": "Web form",
+    "attributes": {
+      "tag": "#text"
+    }
+  },
+  {
+    "id": 7,
+    "role": "meta",
+    "name": "",
+    "attributes": {
+      "tag": "meta"
+    }
+  },
+  {
+    "id": 8,
+    "role": "meta",
+    "name": "viewport",
+    "attributes": {
+      "tag": "meta"
+    }
+  },
+  {
+    "id": 9,
+    "role": "link",
+    "name": "",
+    "attributes": {
+      "tag": "link"
+    }
+  },
+  {
+    "id": 10,
+    "role": "script",
+    "name": "",
+    "attributes": {
+      "tag": "script"
+    }
+  },
+  {
+    "id": 11,
+    "role": "script",
+    "name": "",
+    "attributes": {
+      "tag": "script"
+    }
+  },
+  {
+    "id": 12,
+    "role": "script",
+    "name": "",
+    "attributes": {
+      "tag": "script"
+    }
+  },
+  {
+    "id": 13,
+    "role": "link",
+    "name": "",
+    "attributes": {
+      "tag": "link"
+    }
+  },
+  {
+    "id": 14,
+    "role": "body",
+    "name": "d-flex flex-column h-100",
+    "attributes": {
+      "tag": "body"
+    }
+  },
+  {
+    "id": 15,
+    "role": "main",
+    "name": "flex-shrink-2",
+    "attributes": {
+      "tag": "main"
+    }
+  },
+  {
+    "id": 16,
+    "role": "div",
+    "name": "container",
+    "attributes": {
+      "tag": "div"
+    }
+  },
+  {
+    "id": 17,
+    "role": "div",
+    "name": "row",
+    "attributes": {
+      "tag": "div"
+    }
+  },
+  {
+    "id": 18,
+    "role": "div",
+    "name": "col-12",
+    "attributes": {
+      "tag": "div"
+    }
+  },
+  {
+    "id": 19,
+    "role": "h1",
+    "name": "display-6",
+    "attributes": {
+      "tag": "h1"
+    }
+  },
+  {
+    "id": 20,
+    "role": "text",
+    "name": "Web form",
+    "attributes": {
+      "tag": "#text"
+    }
+  },
+  {
+    "id": 21,
+    "role": "form",
+    "name": "",
+    "attributes": {
+      "tag": "form"
+    }
+  },
+  {
+    "id": 22,
+    "role": "div",
+    "name": "row",
+    "attributes": {
+      "tag": "div"
+    }
+  },
+  {
+    "id": 23,
+    "role": "div",
+    "name": "col-md-4 py-2",
+    "attributes": {
+      "tag": "div"
+    }
+  },
+  {
+    "id": 24,
+    "role": "label",
+    "name": "form-label w-100",
+    "attributes": {
+      "tag": "label"
+    }
+  },
+  {
+    "id": 25,
+    "role": "text",
+    "name": "Text input\n              ",
+    "attributes": {
+      "tag": "#text"
+    }
+  },
+  {
+    "id": 26,
+    "role": "textbox",
+    "name": "my-text",
+    "attributes": {
+      "tag": "input"
+    }
+  },
+  {
+    "id": 29,
+    "role": "label",
+    "name": "form-label w-100",
+    "attributes": {
+      "tag": "label"
+    }
+  },
+  {
+    "id": 30,
+    "role": "text",
+    "name": "Password\n              ",
+    "attributes": {
+      "tag": "#text"
+    }
+  },
+  {
+    "id": 31,
+    "role": "textbox",
+    "name": "my-password",
+    "attributes": {
+      "tag": "input"
+    }
+  },
+  {
+    "id": 34,
+    "role": "label",
+    "name": "form-label w-100",
+    "attributes": {
+      "tag": "label"
+    }
+  },
+  {
+    "id": 35,
+    "role": "text",
+    "name": "Textarea\n              ",
+    "attributes": {
+      "tag": "#text"
+    }
+  },
+  {
+    "id": 36,
+    "role": "textarea",
+    "name": "my-textarea",
+    "attributes": {
+      "tag": "textarea"
+    }
+  },
+  {
+    "id": 39,
+    "role": "label",
+    "name": "form-label w-100",
+    "attributes": {
+      "tag": "label"
+    }
+  },
+  {
+    "id": 40,
+    "role": "text",
+    "name": "Disabled input\n              ",
+    "attributes": {
+      "tag": "#text"
+    }
+  },
+  {
+    "id": 41,
+    "role": "textbox",
+    "name": "my-disabled",
+    "attributes": {
+      "tag": "input"
+    }
+  },
+  {
+    "id": 46,
+    "role": "label",
+    "name": "form-label w-100",
+    "attributes": {
+      "tag": "label"
+    }
+  },
+  {
+    "id": 47,
+    "role": "text",
+    "name": "Readonly input\n              ",
+    "attributes": {
+      "tag": "#text"
+    }
+  },
+  {
+    "id": 48,
+    "role": "textbox",
+    "name": "my-readonly",
+    "attributes": {
+      "tag": "input"
+    }
+  },
+  {
+    "id": 52,
+    "role": "div",
+    "name": "form-group tp-align-right mt-3",
+    "attributes": {
+      "tag": "div"
+    }
+  },
+  {
+    "id": 53,
+    "role": "link",
+    "name": "",
+    "attributes": {
+      "tag": "a"
+    }
+  },
+  {
+    "id": 54,
+    "role": "text",
+    "name": "\n                Return to index\n              ",
+    "attributes": {
+      "tag": "#text"
+    }
+  },
+  {
+    "id": 55,
+    "role": "div",
+    "name": "col-md-4 py-2",
+    "attributes": {
+      "tag": "div"
+    }
+  },
+  {
+    "id": 56,
+    "role": "label",
+    "name": "form-label w-100",
+    "attributes": {
+      "tag": "label"
+    }
+  },
+  {
+    "id": 57,
+    "role": "text",
+    "name": "Dropdown (select)\n              ",
+    "attributes": {
+      "tag": "#text"
+    }
+  },
+  {
+    "id": 58,
+    "role": "select",
+    "name": "my-select",
+    "attributes": {
+      "tag": "select"
+    }
+  },
+  {
+    "id": 67,
+    "role": "option",
+    "name": "",
+    "attributes": {
+      "tag": "option"
+    }
+  },
+  {
+    "id": 72,
+    "role": "text",
+    "name": "Open this select menu",
+    "attributes": {
+      "tag": "#text"
+    }
+  },
+  {
+    "id": 73,
+    "role": "option",
+    "name": "",
+    "attributes": {
+      "tag": "option"
+    }
+  },
+  {
+    "id": 78,
+    "role": "text",
+    "name": "One",
+    "attributes": {
+      "tag": "#text"
+    }
+  },
+  {
+    "id": 79,
+    "role": "option",
+    "name": "",
+    "attributes": {
+      "tag": "option"
+    }
+  },
+  {
+    "id": 84,
+    "role": "text",
+    "name": "Two",
+    "attributes": {
+      "tag": "#text"
+    }
+  },
+  {
+    "id": 85,
+    "role": "option",
+    "name": "",
+    "attributes": {
+      "tag": "option"
+    }
+  },
+  {
+    "id": 90,
+    "role": "text",
+    "name": "Three",
+    "attributes": {
+      "tag": "#text"
+    }
+  },
+  {
+    "id": 91,
+    "role": "label",
+    "name": "form-label w-100",
+    "attributes": {
+      "tag": "label"
+    }
+  },
+  {
+    "id": 92,
+    "role": "text",
+    "name": "Dropdown (datalist)\n              ",
+    "attributes": {
+      "tag": "#text"
+    }
+  },
+  {
+    "id": 93,
+    "role": "textbox",
+    "name": "my-datalist",
+    "attributes": {
+      "tag": "input"
+    }
+  },
+  {
+    "id": 102,
+    "role": "datalist",
+    "name": "my-options",
+    "attributes": {
+      "tag": "datalist"
+    }
+  },
+  {
+    "id": 103,
+    "role": "option",
+    "name": "",
+    "attributes": {
+      "tag": "option"
+    }
+  },
+  {
+    "id": 107,
+    "role": "option",
+    "name": "",
+    "attributes": {
+      "tag": "option"
+    }
+  },
+  {
+    "id": 111,
+    "role": "option",
+    "name": "",
+    "attributes": {
+      "tag": "option"
+    }
+  },
+  {
+    "id": 115,
+    "role": "option",
+    "name": "",
+    "attributes": {
+      "tag": "option"
+    }
+  },
+  {
+    "id": 119,
+    "role": "option",
+    "name": "",
+    "attributes": {
+      "tag": "option"
+    }
+  },
+  {
+    "id": 123,
+    "role": "label",
+    "name": "form-label w-100",
+    "attributes": {
+      "tag": "label"
+    }
+  },
+  {
+    "id": 124,
+    "role": "text",
+    "name": "File input\n              ",
+    "attributes": {
+      "tag": "#text"
+    }
+  },
+  {
+    "id": 125,
+    "role": "input",
+    "name": "my-file",
+    "attributes": {
+      "tag": "input"
+    }
+  },
+  {
+    "id": 132,
+    "role": "div",
+    "name": "form-check",
+    "attributes": {
+      "tag": "div"
+    }
+  },
+  {
+    "id": 133,
+    "role": "label",
+    "name": "form-check-label w-100",
+    "attributes": {
+      "tag": "label"
+    }
+  },
+  {
+    "id": 134,
+    "role": "input",
+    "name": "my-check",
+    "attributes": {
+      "tag": "input"
+    }
+  },
+  {
+    "id": 135,
+    "role": "text",
+    "name": "\n                Checked checkbox\n              ",
+    "attributes": {
+      "tag": "#text"
+    }
+  },
+  {
+    "id": 136,
+    "role": "label",
+    "name": "form-check-label w-100",
+    "attributes": {
+      "tag": "label"
+    }
+  },
+  {
+    "id": 137,
+    "role": "input",
+    "name": "my-check",
+    "attributes": {
+      "tag": "input"
+    }
+  },
+  {
+    "id": 138,
+    "role": "text",
+    "name": "\n                Default checkbox\n              ",
+    "attributes": {
+      "tag": "#text"
+    }
+  },
+  {
+    "id": 139,
+    "role": "div",
+    "name": "form-check",
+    "attributes": {
+      "tag": "div"
+    }
+  },
+  {
+    "id": 140,
+    "role": "label",
+    "name": "form-check-label w-100",
+    "attributes": {
+      "tag": "label"
+    }
+  },
+  {
+    "id": 141,
+    "role": "input",
+    "name": "my-radio",
+    "attributes": {
+      "tag": "input"
+    }
+  },
+  {
+    "id": 142,
+    "role": "text",
+    "name": "\n                Checked radio\n              ",
+    "attributes": {
+      "tag": "#text"
+    }
+  },
+  {
+    "id": 143,
+    "role": "div",
+    "name": "form-check",
+    "attributes": {
+      "tag": "div"
+    }
+  },
+  {
+    "id": 144,
+    "role": "label",
+    "name": "form-check-label w-100",
+    "attributes": {
+      "tag": "label"
+    }
+  },
+  {
+    "id": 145,
+    "role": "input",
+    "name": "my-radio",
+    "attributes": {
+      "tag": "input"
+    }
+  },
+  {
+    "id": 146,
+    "role": "text",
+    "name": "\n                Default radio\n              ",
+    "attributes": {
+      "tag": "#text"
+    }
+  },
+  {
+    "id": 147,
+    "role": "button",
+    "name": "btn btn-outline-primary mt-3",
+    "attributes": {
+      "tag": "button"
+    }
+  },
+  {
+    "id": 148,
+    "role": "text",
+    "name": "Submit",
+    "attributes": {
+      "tag": "#text"
+    }
+  },
+  {
+    "id": 149,
+    "role": "div",
+    "name": "col-md-4 py-2",
+    "attributes": {
+      "tag": "div"
+    }
+  },
+  {
+    "id": 150,
+    "role": "label",
+    "name": "form-label w-100",
+    "attributes": {
+      "tag": "label"
+    }
+  },
+  {
+    "id": 151,
+    "role": "text",
+    "name": "Color picker\n              ",
+    "attributes": {
+      "tag": "#text"
+    }
+  },
+  {
+    "id": 152,
+    "role": "input",
+    "name": "my-colors",
+    "attributes": {
+      "tag": "input"
+    }
+  },
+  {
+    "id": 156,
+    "role": "label",
+    "name": "form-label w-100",
+    "attributes": {
+      "tag": "label"
+    }
+  },
+  {
+    "id": 157,
+    "role": "text",
+    "name": "Date picker\n              ",
+    "attributes": {
+      "tag": "#text"
+    }
+  },
+  {
+    "id": 158,
+    "role": "textbox",
+    "name": "my-date",
+    "attributes": {
+      "tag": "input"
+    }
+  },
+  {
+    "id": 161,
+    "role": "label",
+    "name": "form-label w-100",
+    "attributes": {
+      "tag": "label"
+    }
+  },
+  {
+    "id": 162,
+    "role": "text",
+    "name": "Example range\n              ",
+    "attributes": {
+      "tag": "#text"
+    }
+  },
+  {
+    "id": 163,
+    "role": "input",
+    "name": "my-range",
+    "attributes": {
+      "tag": "input"
+    }
+  },
+  {
+    "id": 168,
+    "role": "input",
+    "name": "my-hidden",
+    "attributes": {
+      "tag": "input"
+    }
+  },
+  {
+    "id": 169,
+    "role": "script",
+    "name": "",
+    "attributes": {
+      "tag": "script"
+    }
+  },
+  {
+    "id": 170,
+    "role": "text",
+    "name": "\n    $('[name=my-date]').datepicker({\n    });\n  ",
+    "attributes": {
+      "tag": "#text"
+    }
+  }
+]

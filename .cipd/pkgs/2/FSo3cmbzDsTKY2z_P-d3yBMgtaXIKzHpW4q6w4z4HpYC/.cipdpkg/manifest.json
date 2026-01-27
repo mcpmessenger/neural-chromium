@@ -1,0 +1,18 @@
+{
+  "format_version": "1.1",
+  "package_name": "chromium/testing/meet-effects-videos",
+  "install_mode": "copy",
+  "actual_install_mode": "copy",
+  "files": [
+    {
+      "name": "effects-normal-light.y4m",
+      "size": 8686963,
+      "hash": "g6RtbdFFhI0tL4Qeref_Fn84pGEZFZrg6M6slVjJAu4C"
+    },
+    {
+      "name": "test_cases.json",
+      "size": 468,
+      "hash": "0Xb1iEb3q63Iwok8v8FWC_mhFGmRpF9ufPXTKnKMBOgC"
+    }
+  ]
+}
