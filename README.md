@@ -113,7 +113,7 @@ neural-chromium/
 │   ├── vlm_solver.py               # Llama Vision integration
 │   └── demo_*.py                   # Example flows (login, CAPTCHA, etc.)
 ├── docs/
-│   └── NEURAL_RUNTIME_ARCHITECTURE.md
+│   └── NEURAL_CHROMIUM_ARCHITECTURE.md     # Detailed System Design
 └── README.md                       # You are here
 ```
 
