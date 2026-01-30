@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Microphone Test</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+        }
+
+        #meter {
+            width: 300px;
+            height: 30px;
+            background: #eee;
+            border: 1px solid #ccc;
+        }
+
+        #level {
+            height: 100%;
+            width: 0%;
+            background: #4caf50;
+            transition: width 0.1s;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Microphone Test</h1>
+    <button id="start">Start Microphone</button>
+    <div id="status">Click Start to begin...</div>
+    <br>
+    <div id="meter">
+        <div id="level"></div>
+    </div>
+
+    <script>
+        document.getElementById('start').onclick = async () => {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                document.getElementById('status').innerText = 'Microphone active! Loopback enabled (Expect Echo).';
+
+                // Use HTMLAudioElement to ensure AudioRendererImpl is used!
+                const audio = document.createElement('audio');
+                audio.srcObject = stream;
+                audio.volume = 0.001; // Ultra-Low Volume (Keep Data Flowing)
+                audio.play();
+
+                const audioContext = new AudioContext();
+                const source = audioContext.createMediaStreamSource(stream);
+                const analyser = audioContext.createAnalyser();
+                analyser.fftSize = 256;
+                source.connect(analyser);
+                // Do NOT connect to destination here, let <audio> tag handle output to avoid double audio.
+
+                const dataArray = new Uint8Array(analyser.frequencyBinCount);
+
+                function update() {
+                    analyser.getByteFrequencyData(dataArray);
+                    let sum = 0;
+                    for (let i = 0; i < dataArray.length; i++) sum += dataArray[i];
+                    const average = sum / dataArray.length;
+                    const width = Math.min(100, average * 2);
+                    document.getElementById('level').style.width = width + '%';
+                    requestAnimationFrame(update);
+                }
+                update();
+            } catch (err) {
+                document.getElementById('status').innerText = 'Error: ' + err.message;
+                console.error(err);
+            }
+        };
+    </script>
+</body>
+
+</html>
