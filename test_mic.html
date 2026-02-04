@@ -79,6 +79,15 @@
                 status.innerText = "Microphone Active! Volume controlled by slider.";
                 status.style.color = "#00ff00";
                 startBtn.disabled = true;
+
+                // Keep Alive Loop (Prevent Chrome from suspending AudioContext)
+                setInterval(() => {
+                    if (audioCtx && audioCtx.state === 'suspended') {
+                        console.log("⚠️ AudioContext suspended. Resuming...");
+                        audioCtx.resume();
+                    }
+                }, 1000);
+
             } catch (e) {
                 status.innerText = "Error: " + e.message;
                 status.style.color = "red";
